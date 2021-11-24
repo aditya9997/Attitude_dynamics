@@ -1,6 +1,6 @@
-clear all
-close all
-clc
+clear all;
+close all;
+clc;
 
 %% definisco dati
 
@@ -26,12 +26,15 @@ ii = 0.3815;
 
 n = sqrt(muP/a^3);  
 
-    %SRP
+%% SRP
 Rs_MB = ones(1,10)*0.5;
 Rs_SP = ones(1,10)*0.1;
 Rd = ones(1,10)*0.1;
 A_MB = ones(1,10)*0.5; %[m^2]
 A_SP = ones(1,10)*1; %[m^2]
+
+% Defining mean angular velocity of Sun
+
 
 n_Sun = 2*pi/(365*24*60*60);
 eps = degtorad(23.45);
