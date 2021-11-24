@@ -24,10 +24,15 @@ a = 8.6251e+06;
 e = 0.1195;
 ii = 0.3815;
 
-n = sqrt(muP/a^3);
+n = sqrt(muP/a^3);  
 
     %SRP
-Rs = 0.5;
+Rs_MB = ones(1,10)*0.5;
+Rs_SP = ones(1,10)*0.1;
+Rd = ones(1,10)*0.1;
+A_MB = ones(1,10)*0.5; %[m^2]
+A_SP = ones(1,10)*1; %[m^2]
+
 n_Sun = 2*pi/(365*24*60*60);
 eps = degtorad(23.45);
 
