@@ -50,4 +50,5 @@ g_1_1 = -1789*10^-9;
 h_1_1 = 5318*10^-9;
 H_0 = sqrt((g_1_0)^2 + (g_1_1)^2 + (h_1_1)^2);
 
-
+% Defining the Areas of solar panels (SP) and the main body of the S/C (MB)
+A_
