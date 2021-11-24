@@ -27,11 +27,12 @@ ii = 0.3815;
 n = sqrt(muP/a^3);  
 
     %SRP
-Rs_MB = ones(1,10)*0.5;
-Rs_SP = ones(1,10)*0.1;
+Rs_MB = ones(1,6)*0.5;
+Rs_SP = ones(1,4)*0.1;
 Rd = ones(1,10)*0.1;
-A_MB = ones(1,10)*0.5; %[m^2]
-A_SP = ones(1,10)*1; %[m^2]
+A_MB = ones(1,6)*0.5; %[m^2]
+A_SP = ones(1,4)*1; %[m^2]
+c = ones(1,10)*299792*10^3; %[m/s]
 
 n_Sun = 2*pi/(365*24*60*60);
 eps = degtorad(23.45);
