@@ -26,39 +26,26 @@ ii = 0.3815;
 
 n = sqrt(muP/a^3);  
 
-    %SRP
-Rs_MB = ones(1,6)*0.5;
-Rs_SP = ones(1,4)*0.1;
-Rd = ones(1,10)*0.1;
-A_MB = ones(1,6)*0.5; %[m^2]
-A_SP = ones(1,4)*1; %[m^2]
-c = ones(1,10)*299792*10^3; %[m/s]
-
+%SRP
+RS_MB = 0.5;
+RS_SP = 0.1;
+RD_MB = 0.1*ones(6,1);
+RD_SP = 0.1*ones(4,1);
+A_MB = 0.5; %[m^2]
+A_SP = 1; %[m^2]
+c = 299792*10^3; %[m/s]
 n_Sun = 2*pi/(365*24*60*60);
 eps = degtorad(23.45);
+w_E = (2*pi)/(24*3600); %angular veloity of earth
+
+%Defining terms for computing H0 of magnetic field (see slides of Lab 7).
+%First number refers to the pedice and second to the apice
+g_1_0 = -29682*10^-9;
+g_1_1 = -1789*10^-9;
+h_1_1 = 5318*10^-9;
+H_0 = sqrt((g_1_0)^2 + (g_1_1)^2 + (h_1_1)^2);
 
 %vettore inerzia [kg*m^2]
-% Ixx = 3.3311;
-% Ixy = -0.0119;
-% Ixz = 0.0027;
-% Iyx = Ixy;
-% Iyy = 2.2024;
-% Iyz = 0.0161;
-% Izy = Iyz;
-% Izx = Ixz;
-% Izz = 1.8033;
-% 
-% Imat = [Ixx, Ixy, Ixz;
-%         Iyx, Iyy, Iyz;
-%         Izx, Izy, Izz];
-%     
-% I = eig(Imat);
-% Iinv = inv(diag(I));
-% 
-% Ix = I(1);
-% Iy = I(2);
-% Iz = I(3); 
-
 Ix = 0.04;
 Iy = 0.06;
 Iz = 0.08; 
@@ -70,15 +57,8 @@ om_z = n;
 omega_0 = [om_x, om_y, om_z];
 
 %tempo
- 
-Time = 5*(2*pi/n);
+Time = (2*pi/n);
 
-% out = sim('Quaternions_Method');
-% om_BL = out.Omega_BL.data;
-% s = size(om_BL, 1);
-% t=linspace(0, Time, s);
-% 
-% 
-% plot(t, om_BL(:,:))
+
 
 
