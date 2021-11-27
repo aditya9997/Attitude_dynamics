@@ -29,19 +29,13 @@ n = sqrt(muP/a^3);
 %SRP
 RS_MB = 0.5;
 RS_SP = 0.1;
-<<<<<<< Updated upstream:Attitude_Desktop/Lab7_desktop.m
-RD = 0.1*ones(1,10);
-
-A_MB = 0.5*ones(1,6); %[m^2]
-=======
 RD_MB = 0.1*ones(6,1);
-RD_SP = 0.1*ones(4,1);
+RD_SP = 1;
 A_MB = 0.5; %[m^2]
->>>>>>> Stashed changes:Lab7 Giovanni/Lab7.m
 A_SP = 1; %[m^2]
 c = 299792*10^3; %[m/s]
 n_Sun = 2*pi/(365*24*60*60);
-eps = degtorad(23.45);
+eps = deg2rad(23.45);
 w_E = (2*pi)/(24*3600); %angular veloity of earth
 
 %Defining terms for computing H0 of magnetic field (see slides of Lab 7).
@@ -64,7 +58,3 @@ omega_0 = [om_x, om_y, om_z];
 
 %tempo
 Time = (2*pi/n);
-
-
-
-
