@@ -1,0 +1,13 @@
+-Write the main script with:
+	-input data script
+	-output data script
+	-plots section
+NOTE: all scripts should be commented with the inputs, outputs, hypotesis used
+-Define the geometry and mass
+-Optimize the code:
+	-Remove all matlab function blocks
+	-Write all the blocks in matrix form
+	-Use vector concatenate to define the matrices
+	-Check for matrices sparsity
+	-Optimize solar radiation pressure code by removing collector blocks
+-Write some check solution to be used every time we add a new block
