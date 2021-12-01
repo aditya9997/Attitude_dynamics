@@ -65,6 +65,13 @@ omega_0 = [om_x, om_y, om_z];
 %tempo
 Time = 10*(2*pi/n);
 
+% Reaction Wheels (using 4 RW with the 3 axis + diagonal model)
+A_rw = [1 0 0 1/sqrt(3);...
+0 1 0 1/sqrt(3);
+0 0 1 1/sqrt(3)];
 
-
+ A_rw_star = [5/6 -1/6 -1/6;...
+             -1/6  5/6 -1/6;
+             -1/6 -1/6  5/6;
+              1/(2*sqrt(3)) 1/(2*sqrt(3)) 1/(2*sqrt(3))];
 
