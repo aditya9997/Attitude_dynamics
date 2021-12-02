@@ -63,7 +63,7 @@ om_z = n;
 omega_0 = [om_x, om_y, om_z];
 
 %tempo
-Time = 1*(2*pi/n);
+Time = 2*(2*pi/n);
 
 % Reaction Wheels (using 4 RW with the 3 axis + diagonal model)
 A_rw = [1 0 0 1/sqrt(3);...
