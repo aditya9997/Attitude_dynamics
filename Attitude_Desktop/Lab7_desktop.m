@@ -63,20 +63,8 @@ om_z = n;
 omega_0 = [om_x, om_y, om_z];
 
 %tempo
-Time = 2*(2*pi/n);
+Time = 10*(2*pi/n);
 
-% Reaction Wheels (using 4 RW with the 3 axis + diagonal model)
-A_rw = [1 0 0 1/sqrt(3);...
-0 1 0 1/sqrt(3);
-0 0 1 1/sqrt(3)];
-
- A_rw_star = [5/6 -1/6 -1/6;...
-             -1/6  5/6 -1/6;
-             -1/6 -1/6  5/6;
-              1/(2*sqrt(3)) 1/(2*sqrt(3)) 1/(2*sqrt(3))];
-
-MB = [2000; 0.3; 1; 0.12].*1e-2;
-SP = [2000; 0.3; 1; 0.12].*1e-2;
-
-
-
+%magnetometer
+p_acc = 0.5; %[degree], look at slide 12 of attitude sensors, bernelli's slide
+f_mag = 18; %[Hz] by https://www.cubesatshop.com/product/nss-magnetometer/, in alternative we can put f=5 since bernelli's slides
