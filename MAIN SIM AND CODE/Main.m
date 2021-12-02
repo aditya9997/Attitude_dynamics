@@ -50,7 +50,7 @@ Time = 2*(2*pi/n);
 
 %Mass and three dimensions of the S/C main body(MB) and solar panel(SP)
 MB = [2000; 0.3; 1; 0.12].*1e-2;
-SP = [2; 0.3; 1; 0.12];
+SP = [2000; 0.3; 1; 0.12].*1e-2;
 
 %magnetometer
 p_acc = 0.5; %[degree], look at slide 12 of attitude sensors, bernelli's slide
