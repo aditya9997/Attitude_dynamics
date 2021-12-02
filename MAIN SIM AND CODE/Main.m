@@ -46,7 +46,7 @@ omega_0 = [om_x, om_y, om_z];
 theta0 = 0;
 
 %tempo
-Time = 2*(2*pi/n);
+Time = 1*(2*pi/n);
 
 %Mass and three dimensions of the S/C main body(MB) and solar panel(SP)
 MB = [2000; 0.3; 1; 0.12].*1e-2;
