@@ -15,3 +15,17 @@ NOTE: all scripts should be commented with the inputs, outputs, hypotesis used
 -Write a code to plot the ellipsoids and their projection in the coordinate planes
 -Write a code to plot the axes during the simulation (quiver3) and attach to it the CAD model of the spacecraft
 -Understand how to plot in time the solar exposure of each face of the spacecraft
+
+Lab 8 tasks:
+-Set an orbit
+-Depending on the orbit model the position of other celestial bodies(if necessary)
+-Define the geometry and mass >> we just need the 3 dimensions and the masses >> check if all the components fits in the space and mass requirements
+
+Lab 9 tasks:
+-Ask what sensor's positioning means
+-Compute the real magnetic field vector from the DCM with error and then compute the tollerance (Giovanni)
+-Do the same thing for the gyro (Jorge)
+-Attitude determination >> (Aditya)
+-Pointing manouvre, point to the Sun/Earth depending on which one is the easier (Davide)
+
+
