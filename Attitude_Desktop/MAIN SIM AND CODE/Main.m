@@ -53,5 +53,7 @@ MB = [2000; 0.3; 1; 0.12].*1e-2;
 SP = [2000; 0.3; 1; 0.12].*1e-2;
 
 %magnetometer
-p_acc = 0.5; %[degree], look at slide 12 of attitude sensors, bernelli's slide
-f_mag = 18; %[Hz] by https://www.cubesatshop.com/product/nss-magnetometer/, in alternative we can put f=5 since bernelli's slides
+p_acc = deg2rad(5); %[rad], look at slide 12 of attitude sensors, bernelli's slide
+f_mag = 5; %[Hz] since slides bernelli. In our magnetometer, there is a different value
+%of 1000Hz, chiarire http://www.seismic.com.au/assets/pdf/SBG_Systems-IG_500N_Brochure.pdf
+ms = 1.2 * 0.0001; %[T], measurement range
