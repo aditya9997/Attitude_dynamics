@@ -1,6 +1,6 @@
-clear all
-close all
-clc
+clear all;
+close all;
+clc;
 
 %% definisco dati
 
@@ -55,5 +55,4 @@ SP = [2000; 0.3; 1; 0.12].*1e-2;
 %magnetometer
 p_acc = 0.5; %[degree], look at slide 12 of attitude sensors, bernelli's slide
 f_mag = 18; %[Hz] by https://www.cubesatshop.com/product/nss-magnetometer/, in alternative we can put f=5 since bernelli's slides
-
-out1 = sim('Quaternions_Method_main');
+% 
