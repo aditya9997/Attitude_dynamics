@@ -11,7 +11,8 @@ muP = G*Mt;
 a = 8.6251e+06;
 e = 0.1195;
 i = 0;
-n = sqrt(muP/a^3);  
+n = sqrt(muP/a^3);
+T = 2*pi/n;
 
 %SRP
 RS_MB = 0.5;
@@ -32,7 +33,8 @@ eps = degtorad(23.45);
 w_E = (2*pi)/(24*3600); %angular veloity of earth
 
 %Defining terms for computing H0 of magnetic field (see slides of Lab 7).
-%First number refers to the pedice and second to the apice
+%First number refers to the pedice and second to the apice 10^-9 refers to
+%the change of the measure units
 g_1_0 = -29682*10^-9;
 g_1_1 = -1789*10^-9;
 h_1_1 = 5318*10^-9;
@@ -47,6 +49,11 @@ theta0 = 0;
 
 %tempo
 Time = 1*(2*pi/n);
+
+%Gyro
+t_sample
+sig_b
+sig_n
 
 %Mass and three dimensions of the S/C main body(MB) and solar panel(SP)
 MB = [2000; 0.3; 1; 0.12].*1e-2;
