@@ -69,7 +69,7 @@ A_rw_star =  [5/6 -1/6 -1/6;...
 
 
 % %Gyro
-t_sample = 1/262;
+t_sample = 1/5;
 sig_b = 0.3*pi/180/3600/sqrt(t_sample);
 sig_n = 0.15*pi/180/3600/sqrt(t_sample);
 sig_b = sig_b^2;
