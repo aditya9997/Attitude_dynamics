@@ -12,6 +12,12 @@ a = 8.6251e+06;
 e = 0.1195;
 i = 0.3815;
 n = sqrt(muP/a^3);  
+T = 2*pi/n;
+
+%initial condition A_BN
+A_BN_0 =  [1/3, 2/3, 2/3; ...
+           2/3, 1/3, -2/3; ...
+          -2/3, 2/3,-1/3];
 
 %SRP
 RS_MB = 0.5;
@@ -53,7 +59,26 @@ MB = [2000; 0.3; 1; 0.12].*1e-2;
 SP = [2000; 0.3; 1; 0.12].*1e-2;
 
 %magnetometer
-p_acc = deg2rad(5); %[rad], look at slide 12 of attitude sensors, bernelli's slide
-f_mag = 5; %[Hz] since slides bernelli. In our magnetometer, there is a different value
-%of 1000Hz, chiarire http://www.seismic.com.au/assets/pdf/SBG_Systems-IG_500N_Brochure.pdf
-mr = 1.2 * 0.0001; %[T], measurement range
+p_acc = 0.5; %[degree], look at slide 12 of attitude sensors, bernelli's slide
+f_mag = 18; %[Hz] by https://www.cubesatshop.com/product/nss-magnetometer/, in alternative we can put f=5 since bernelli's slides
+
+% Reaction Wheels (using 4 RW with the 3 axis + diagonal model)
+A_rw = [1 0 0 1/sqrt(3);...
+        0 1 0 1/sqrt(3);
+        0 0 1 1/sqrt(3)];
+
+A_rw_star =  [5/6 -1/6 -1/6;...
+             -1/6  5/6 -1/6;
+             -1/6 -1/6  5/6;
+              1/(2*sqrt(3)) 1/(2*sqrt(3)) 1/(2*sqrt(3))];
+
+
+% %Gyro
+t_sample = 1/5;
+sig_b = 0.3*pi/180/3600/sqrt(t_sample);
+sig_n = 0.15*pi/180/3600/sqrt(t_sample);
+sig_b = sig_b^2;
+
+mr = 1.2*1e-4;
+p_acc = deg2rad(5);
+f_mag = 5;
