@@ -1,4 +1,4 @@
-k = 13;
+k = 4;
 S = zeros(k, k);
 for n = 1:k
     for m = 0:(n - 1)
