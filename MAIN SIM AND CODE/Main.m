@@ -111,3 +111,6 @@ f_mag = 5;
 
 rho_d_MB = 0.1;
 rho_s_MB = 0.5;
+
+
+ghnorm(13)
