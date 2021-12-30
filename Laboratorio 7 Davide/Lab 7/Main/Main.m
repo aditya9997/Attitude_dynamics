@@ -14,6 +14,7 @@ i = 0.3815;
 n = sqrt(muP/a^3);  
 T = 2*pi/n;
 
+
 %initial condition A_BN
 A_BN_0 =  [1/3, 2/3, 2/3; ...
            2/3, 1/3, -2/3; ...
@@ -36,6 +37,30 @@ c = 299792*10^3; %[m/s]
 n_Sun = 2*pi/(365*24*60*60);
 eps = deg2rad(23.45);
 w_E = (2*pi)/(24*3600); %angular veloity of earth
+
+
+% %% Magnetic field Gauss
+% k = 4;                  %order of approximation IGRF
+% 
+% % Gauss mapping matrix of the h,g values of the IGRF table 
+% S = zeros(k, k);
+% for n = 1:k
+%     for m = 0:(n - 1)
+%         if m == 0
+%             if n == 1
+%                 S(n,m + 1) = 1;
+%             else
+%                 S(n,m + 1) = S(n - 1, m + 1) * ( (2 * n - 1 ) / n );
+%             end
+%         elseif m == 1
+%             S(n, m + 1) = S(n, m) * sqrt( (n - m + 1) * 2 / (n + m) );
+%         else
+%             S(n, m + 1) = S(n, m) * sqrt( (n - m + 1) / (n + m) );
+%         end
+%     end
+% end
+
+
 
 %Defining terms for computing H0 of magnetic field (see slides of Lab 7).
 %First number refers to the pedice and second to the apice
@@ -83,6 +108,11 @@ mr = 1.2*1e-4;
 p_acc = deg2rad(5);
 f_mag = 5;
 
-% Control of Slew manoeuvre
-k1 = 1;
-k2 = 3;
+
+rho_d_MB = 0.1;
+rho_s_MB = 0.5;
+
+[gn, gm, gvali, gsvi] = textread('igrfSg.txt','%f %f %f %f');
+[hn, hm, hvali, hsvi] = textread('igrfSh.txt','%f %f %f %f');
+G = [gn, gm, gvali, gsvi];
+H = [hn, hm, hvali, hsvi];
