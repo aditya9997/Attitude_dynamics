@@ -8,7 +8,7 @@ clc
 G = 6.67259 * 1e-11; %[N*m^2*kg^-2]
 Mt = 5.9726 * 1e24; %[kg]
 muP = G*Mt;
-a = 8.6251e+06;
+a = 8.6251e06;
 e = 0.1195;
 i = 0.3815;
 n = sqrt(muP/a^3);  
@@ -70,9 +70,9 @@ h_1_1 = 5318*10^-9;
 H_0 = sqrt((g_1_0)^2 + (g_1_1)^2 + (h_1_1)^2);
 
 %condizioni iniziali
-om_x = 1e-6;
-om_y = 1e-6;
-om_z = n;
+om_x = 0;
+om_y = 0;
+om_z = 0;
 omega_0 = [om_x, om_y, om_z];
 theta0 = 0;
 
@@ -80,8 +80,8 @@ theta0 = 0;
 Time = 1*(2*pi/n);
 
 %Mass and three dimensions of the S/C main body(MB) and solar panel(SP)
-MB = [2000; 0.3; 1; 0.12].*1e-2;
-SP = [2000; 0.3; 1; 0.12].*1e-2;
+MB = [10; 0.3; 0.3; 0.3];
+SP = [30; 0.3; 1; 3e-2];
 
 %magnetometer
 p_acc = 0.5; %[degree], look at slide 12 of attitude sensors, bernelli's slide
@@ -99,7 +99,7 @@ A_rw_star =  [5/6 -1/6 -1/6;...
 
 
 % %Gyro
-t_sample = 1/5;
+t_sample = 1;
 sig_b = 0.3*pi/180/3600/sqrt(t_sample);
 sig_n = 0.15*pi/180/3600/sqrt(t_sample);
 sig_b = sig_b^2;
@@ -118,6 +118,6 @@ G = [gn, gm, gvali, gsvi];
 H = [hn, hm, hvali, hsvi];
 
 %slew manoevre A_BN desired
-A_slew = 0.4777 ¡0.0636 0.8762
-¡0.7262 0.5327 0.4345
-¡0.4944 ¡0.8439 0.2083
+A_slew = [0.4777 0.0636 0.8762;
+    0.7262 0.5327 0.4345;
+    0.4944 0.8439 0.2083];
