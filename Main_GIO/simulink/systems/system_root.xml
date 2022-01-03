@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">66</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">3633</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Constant" Name="Constant" SID="3403">
+    <P Name="Position">[-1440, -290, -1410, -260]</P>
+    <P Name="ZOrder">403</P>
+    <P Name="Value">MB</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="3404">
+    <P Name="Position">[-1440, -170, -1410, -140]</P>
+    <P Name="ZOrder">404</P>
+    <P Name="Value">SP</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="3621">
+    <P Name="Position">[-1445, -10, -1415, 20]</P>
+    <P Name="ZOrder">523</P>
+    <P Name="Value">i</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="3630">
+    <P Name="Position">[-1455, -90, -1405, -60]</P>
+    <P Name="ZOrder">525</P>
+    <P Name="Value">omega_0</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Dynamics" SID="1">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[405, 244, 637, 392]</P>
+    <P Name="ZOrder">394</P>
+    <P Name="ForegroundColor">yellow</P>
+    <P Name="DropShadow">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;,&quot;In2&quot;,&quot;In3&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;0fb0fd28-732a-45b7-951f-4b0b2306202c&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out1&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;160a6d95-5e8b-4088-9ac4-372e2ef53b1e&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In4&quot;],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;bc0d773d-9b3c-40c2-804a-fc9efd6e220c&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;1f85a25c-c8d4-4d9d-9994-483d99135538&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <Mask>
+      <Display IconOpaque="transparent" PortRotate="physical"/>
+    </Mask>
+    <System Ref="system_1"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Enviroment" SID="24">
+    <P Name="Ports">[9, 3]</P>
+    <P Name="Position">[444, -135, 600, 105]</P>
+    <P Name="ZOrder">395</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out2&quot;,&quot;Out3&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;77a65197-c5ef-4c05-af97-bd670bb59a1b&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out1&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;f4905732-994b-44e8-915f-1f1165b6d340&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;,&quot;In2&quot;,&quot;In3&quot;,&quot;In4&quot;,&quot;In5&quot;],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;dbb628bc-072b-4daa-a580-a056bf799753&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In6&quot;,&quot;In7&quot;,&quot;In8&quot;,&quot;In9&quot;],&quot;side&quot;:&quot;BOTTOM&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;e6af6235-b92e-4098-9bbc-91b77f168ead&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;a4645f0d-8f51-4ba7-9ec5-d423e83ccc17&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <System Ref="system_24"/>
+  </Block>
+  <Block BlockType="From" Name="From" SID="3400">
+    <P Name="Position">[360, -29, 400, -1]</P>
+    <P Name="ZOrder">400</P>
+    <P Name="GotoTag">r_SP1</P>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="3401">
+    <P Name="Position">[360, 21, 400, 49]</P>
+    <P Name="ZOrder">401</P>
+    <P Name="GotoTag">r_SP2</P>
+  </Block>
+  <Block BlockType="From" Name="From10" SID="3461">
+    <P Name="Position">[645, 1, 685, 29]</P>
+    <P Name="ZOrder">417</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">top</P>
+    <P Name="GotoTag">n</P>
+  </Block>
+  <Block BlockType="From" Name="From11" SID="3462">
+    <P Name="Position">[635, 61, 695, 89]</P>
+    <P Name="ZOrder">418</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">top</P>
+    <P Name="GotoTag">r_LVLH</P>
+  </Block>
+  <Block BlockType="From" Name="From12" SID="3619">
+    <P Name="Position">[-1120, 436, -1080, 464]</P>
+    <P Name="ZOrder">521</P>
+    <P Name="GotoTag">theta</P>
+  </Block>
+  <Block BlockType="From" Name="From13" SID="3620">
+    <P Name="Position">[-1120, 376, -1080, 404]</P>
+    <P Name="ZOrder">522</P>
+    <P Name="GotoTag">A_BN</P>
+  </Block>
+  <Block BlockType="From" Name="From14" SID="3629">
+    <P Name="Position">[275, 306, 315, 334]</P>
+    <P Name="ZOrder">524</P>
+    <P Name="GotoTag">w_0</P>
+  </Block>
+  <Block BlockType="From" Name="From15" SID="3633">
+    <P Name="Position">[-1120, 496, -1080, 524]</P>
+    <P Name="ZOrder">528</P>
+    <P Name="GotoTag">i</P>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="3402">
+    <P Name="Position">[360, 71, 400, 99]</P>
+    <P Name="ZOrder">402</P>
+    <P Name="GotoTag">I_SC</P>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="3407">
+    <P Name="Position">[-1120, -199, -1080, -171]</P>
+    <P Name="ZOrder">407</P>
+    <P Name="GotoTag">MB</P>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="3408">
+    <P Name="Position">[-1120, -79, -1080, -51]</P>
+    <P Name="ZOrder">408</P>
+    <P Name="GotoTag">SP</P>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="3409">
+    <P Name="Position">[360, -79, 400, -51]</P>
+    <P Name="ZOrder">409</P>
+    <P Name="GotoTag">MB</P>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="3410">
+    <P Name="Position">[360, -129, 400, -101]</P>
+    <P Name="ZOrder">410</P>
+    <P Name="GotoTag">SP</P>
+  </Block>
+  <Block BlockType="From" Name="From7" SID="3411">
+    <P Name="Position">[275, 256, 315, 284]</P>
+    <P Name="ZOrder">411</P>
+    <P Name="GotoTag">I_SC</P>
+  </Block>
+  <Block BlockType="From" Name="From8" SID="3458">
+    <P Name="Position">[640, -119, 695, -91]</P>
+    <P Name="ZOrder">414</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">top</P>
+    <P Name="GotoTag">A_BN</P>
+  </Block>
+  <Block BlockType="From" Name="From9" SID="3459">
+    <P Name="Position">[640, -59, 695, -31]</P>
+    <P Name="ZOrder">415</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">top</P>
+    <P Name="GotoTag">A_BL</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="3397">
+    <P Name="Position">[-755, -60, -715, -30]</P>
+    <P Name="ZOrder">397</P>
+    <P Name="GotoTag">I_SC</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="3398">
+    <P Name="Position">[-755, -140, -700, -110]</P>
+    <P Name="ZOrder">398</P>
+    <P Name="GotoTag">r_SP2</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto10" SID="3631">
+    <P Name="Position">[-1360, -90, -1320, -60]</P>
+    <P Name="ZOrder">526</P>
+    <P Name="GotoTag">w_0</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto11" SID="3632">
+    <P Name="Position">[-1360, -10, -1320, 20]</P>
+    <P Name="ZOrder">527</P>
+    <P Name="GotoTag">i</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="3399">
+    <P Name="Position">[-755, -220, -700, -190]</P>
+    <P Name="ZOrder">399</P>
+    <P Name="GotoTag">r_SP1</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="3405">
+    <P Name="Position">[-1360, -170, -1320, -140]</P>
+    <P Name="ZOrder">405</P>
+    <P Name="GotoTag">SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="3406">
+    <P Name="Position">[-1360, -290, -1320, -260]</P>
+    <P Name="ZOrder">406</P>
+    <P Name="GotoTag">MB</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto5" SID="3456">
+    <P Name="Position">[465, -225, 495, -185]</P>
+    <P Name="ZOrder">412</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="NameLocation">right</P>
+    <P Name="GotoTag">S_N</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto6" SID="3457">
+    <P Name="Position">[545, -225, 575, -185]</P>
+    <P Name="ZOrder">413</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="NameLocation">right</P>
+    <P Name="GotoTag">b_N</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto7" SID="3503">
+    <P Name="Position">[-780, 110, -740, 140]</P>
+    <P Name="ZOrder">517</P>
+    <P Name="GotoTag">theta</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto8" SID="3504">
+    <P Name="Position">[-780, 175, -740, 205]</P>
+    <P Name="ZOrder">518</P>
+    <P Name="GotoTag">r_N</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto9" SID="3505">
+    <P Name="Position">[-780, 240, -740, 270]</P>
+    <P Name="ZOrder">519</P>
+    <P Name="GotoTag">n</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Inertia matrix" SID="3147">
+    <P Name="Ports">[2, 3]</P>
+    <P Name="Position">[-1025, -246, -810, -4]</P>
+    <P Name="ZOrder">396</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3147"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Orbit Propagation" SID="3463">
+    <P Name="Ports">[0, 3]</P>
+    <P Name="Position">[-1020, 93, -810, 287]</P>
+    <P Name="ZOrder">516</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3463"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Relative_Attitude" SID="3506">
+    <P Name="Ports">[3, 2]</P>
+    <P Name="Position">[-1020, 356, -810, 544]</P>
+    <P Name="ZOrder">520</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3506"/>
+  </Block>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3147#out:3</P>
+    <P Name="Dst">3397#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3147#out:2</P>
+    <P Name="Dst">3398#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3147#out:1</P>
+    <P Name="Dst">3399#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">3400#out:1</P>
+    <P Name="Dst">24#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">3401#out:1</P>
+    <P Name="Dst">24#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">3402#out:1</P>
+    <P Name="Dst">24#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">3403#out:1</P>
+    <P Name="Dst">3406#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">3404#out:1</P>
+    <P Name="Dst">3405#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">3407#out:1</P>
+    <P Name="Dst">3147#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">3408#out:1</P>
+    <P Name="Dst">3147#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">3409#out:1</P>
+    <P Name="Dst">24#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">3410#out:1</P>
+    <P Name="Dst">24#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">24#out:1</P>
+    <P Name="Dst">1#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">3411#out:1</P>
+    <P Name="Dst">1#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">24#out:2</P>
+    <P Name="Dst">3456#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">24#out:3</P>
+    <P Name="Dst">3457#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">25</P>
+    <P Name="Src">3458#out:1</P>
+    <P Name="Dst">24#in:6</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">26</P>
+    <P Name="Src">3459#out:1</P>
+    <P Name="Dst">24#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">27</P>
+    <P Name="Src">3461#out:1</P>
+    <P Name="Dst">24#in:8</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">28</P>
+    <P Name="Src">3462#out:1</P>
+    <P Name="Dst">24#in:9</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">29</P>
+    <P Name="Src">3463#out:1</P>
+    <P Name="Dst">3503#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">30</P>
+    <P Name="Src">3463#out:2</P>
+    <P Name="Dst">3504#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">31</P>
+    <P Name="Src">3463#out:3</P>
+    <P Name="Dst">3505#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">32</P>
+    <P Name="Src">3619#out:1</P>
+    <P Name="Dst">3506#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">33</P>
+    <P Name="Src">3620#out:1</P>
+    <P Name="Dst">3506#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">35</P>
+    <P Name="Src">3629#out:1</P>
+    <P Name="Dst">1#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">36</P>
+    <P Name="Src">3630#out:1</P>
+    <P Name="Dst">3631#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">37</P>
+    <P Name="Src">3621#out:1</P>
+    <P Name="Dst">3632#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">38</P>
+    <P Name="Src">3633#out:1</P>
+    <P Name="Dst">3506#in:3</P>
+  </Line>
+</System>

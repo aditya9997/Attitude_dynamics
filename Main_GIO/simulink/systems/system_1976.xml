@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">219</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="SP" SID="1977">
+    <P Name="Position">[190, 243, 220, 257]</P>
+    <P Name="ZOrder">566</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux" SID="1978">
+    <P Name="Ports">[1, 4]</P>
+    <P Name="Position">[250, 116, 255, 379]</P>
+    <P Name="ZOrder">567</P>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="1979">
+    <P Name="Position">[410, 241, 450, 269]</P>
+    <P Name="ZOrder">575</P>
+    <P Name="GotoTag">b</P>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="1980">
+    <P Name="Position">[410, 206, 450, 234]</P>
+    <P Name="ZOrder">577</P>
+    <P Name="GotoTag">a</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="1981">
+    <P Name="Position">[285, 200, 325, 230]</P>
+    <P Name="ZOrder">569</P>
+    <P Name="GotoTag">a</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="1982">
+    <P Name="Position">[285, 265, 325, 295]</P>
+    <P Name="ZOrder">570</P>
+    <P Name="GotoTag">b</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="1983">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[505, 201, 535, 274]</P>
+    <P Name="ZOrder">563</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">a*b</P>
+    </Port>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="1984">
+    <P Name="Position">[295, 140, 315, 160]</P>
+    <P Name="ZOrder">568</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator1" SID="1985">
+    <P Name="Position">[295, 335, 315, 355]</P>
+    <P Name="ZOrder">579</P>
+  </Block>
+  <Block BlockType="Outport" Name="A_vect" SID="1986">
+    <P Name="Position">[655, 233, 685, 247]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">1980#out:1</P>
+    <P Name="Dst">1983#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">1979#out:1</P>
+    <P Name="Dst">1983#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">1978#out:4</P>
+    <P Name="Dst">1985#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">1978#out:3</P>
+    <P Name="Dst">1982#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">1978#out:2</P>
+    <P Name="Dst">1981#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">1978#out:1</P>
+    <P Name="Dst">1984#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">a*b</P>
+    <P Name="ZOrder">7</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1983#out:1</P>
+    <P Name="Dst">1986#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">1977#out:1</P>
+    <P Name="Dst">1978#in:1</P>
+  </Line>
+</System>

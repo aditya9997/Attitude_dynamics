@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[205, 56, 1199, 814]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="ActionPort" Name="Action Port" SID="2897">
+    <P Name="Position">[170, 15, 229, 43]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="2898">
+    <P Name="Position">[100, 70, 130, 100]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Value">[0;0;0]</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="2899">
+    <P Name="Position">[325, 78, 355, 92]</P>
+    <P Name="ZOrder">-3</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">2898#out:1</P>
+    <P Name="Dst">2899#in:1</P>
+  </Line>
+</System>

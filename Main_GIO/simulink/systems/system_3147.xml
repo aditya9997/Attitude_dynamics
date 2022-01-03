@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[566, 0, 1560, 758]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">150</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="MB" SID="3148">
+    <P Name="Position">[210, 308, 240, 322]</P>
+    <P Name="ZOrder">288</P>
+  </Block>
+  <Block BlockType="Inport" Name="SP" SID="3149">
+    <P Name="Position">[210, 113, 240, 127]</P>
+    <P Name="ZOrder">281</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="ComplexToRealImag" Name="Complex to&#xA;Real-Imag" SID="3150">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[3400, 365, 3430, 395]</P>
+    <P Name="ZOrder">376</P>
+    <P Name="Output">Real</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux" SID="3151">
+    <P Name="Ports">[1, 4]</P>
+    <P Name="Position">[275, 35, 280, 205]</P>
+    <P Name="ZOrder">287</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux1" SID="3152">
+    <P Name="Ports">[1, 4]</P>
+    <P Name="Position">[280, 231, 285, 399]</P>
+    <P Name="ZOrder">289</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Diagonalization" SID="3153">
+    <P Name="Ports">[2, 2]</P>
+    <P Name="Position">[3620, 7, 4005, 163]</P>
+    <P Name="ZOrder">342</P>
+    <P Name="Commented">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3153"/>
+  </Block>
+  <Block BlockType="Display" Name="Display" SID="3238">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[3580, 385, 3830, 605]</P>
+    <P Name="ZOrder">375</P>
+    <P Name="Decimation">1</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="3239">
+    <P Name="Position">[2490, 306, 2530, 334]</P>
+    <P Name="ZOrder">295</P>
+    <P Name="GotoTag">m_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="3240">
+    <P Name="Position">[3850, 456, 3890, 484]</P>
+    <P Name="ZOrder">303</P>
+    <P Name="GotoTag">r_SP1</P>
+  </Block>
+  <Block BlockType="From" Name="From10" SID="3241">
+    <P Name="Position">[2490, 196, 2530, 224]</P>
+    <P Name="ZOrder">341</P>
+    <P Name="GotoTag">I_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From11" SID="3242">
+    <P Name="Position">[560, 291, 615, 319]</P>
+    <P Name="ZOrder">324</P>
+    <P Name="GotoTag">b_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From12" SID="3243">
+    <P Name="Position">[1455, -59, 1495, -31]</P>
+    <P Name="ZOrder">349</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">R_Diag</P>
+  </Block>
+  <Block BlockType="From" Name="From13" SID="3244">
+    <P Name="Position">[2490, 251, 2530, 279]</P>
+    <P Name="ZOrder">326</P>
+    <P Name="GotoTag">r_SP1</P>
+  </Block>
+  <Block BlockType="From" Name="From14" SID="3245">
+    <P Name="Position">[2480, 386, 2520, 414]</P>
+    <P Name="ZOrder">332</P>
+    <P Name="GotoTag">m_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From15" SID="3246">
+    <P Name="Position">[2480, 431, 2520, 459]</P>
+    <P Name="ZOrder">333</P>
+    <P Name="GotoTag">a_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From16" SID="3247">
+    <P Name="Position">[2480, 476, 2520, 504]</P>
+    <P Name="ZOrder">334</P>
+    <P Name="GotoTag">b_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From17" SID="3248">
+    <P Name="Position">[2480, 521, 2520, 549]</P>
+    <P Name="ZOrder">335</P>
+    <P Name="GotoTag">h_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From18" SID="3249">
+    <P Name="Position">[560, 396, 615, 424]</P>
+    <P Name="ZOrder">336</P>
+    <P Name="GotoTag">a_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From19" SID="3250">
+    <P Name="Position">[1455, 66, 1495, 94]</P>
+    <P Name="ZOrder">350</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">SB</P>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="3251">
+    <P Name="Position">[3850, 501, 3890, 529]</P>
+    <P Name="ZOrder">304</P>
+    <P Name="GotoTag">r_SP2</P>
+  </Block>
+  <Block BlockType="From" Name="From20" SID="3252">
+    <P Name="Position">[3850, 396, 3890, 424]</P>
+    <P Name="ZOrder">352</P>
+    <P Name="GotoTag">I_SC</P>
+  </Block>
+  <Block BlockType="From" Name="From21" SID="3253">
+    <P Name="Position">[1560, 356, 1600, 384]</P>
+    <P Name="ZOrder">366</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">I_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From22" SID="3254">
+    <P Name="Position">[3525, 111, 3565, 139]</P>
+    <P Name="ZOrder">369</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">alpha_P</P>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="3255">
+    <P Name="Position">[585, 41, 640, 69]</P>
+    <P Name="ZOrder">317</P>
+    <P Name="GotoTag">m_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="3256">
+    <P Name="Position">[585, 86, 640, 114]</P>
+    <P Name="ZOrder">318</P>
+    <P Name="GotoTag">a_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="3257">
+    <P Name="Position">[585, 131, 640, 159]</P>
+    <P Name="ZOrder">319</P>
+    <P Name="GotoTag">b_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From7" SID="3258">
+    <P Name="Position">[585, 176, 640, 204]</P>
+    <P Name="ZOrder">320</P>
+    <P Name="GotoTag">h_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From8" SID="3259">
+    <P Name="Position">[1420, 251, 1495, 279]</P>
+    <P Name="ZOrder">321</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">gamma_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From9" SID="3260">
+    <P Name="Position">[2200, 196, 2255, 224]</P>
+    <P Name="ZOrder">322</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">SP_Rot</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="3261">
+    <P Name="Position">[360, 45, 410, 75]</P>
+    <P Name="ZOrder">294</P>
+    <P Name="GotoTag">m_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="3262">
+    <P Name="Position">[1160, 290, 1200, 320]</P>
+    <P Name="ZOrder">302</P>
+    <P Name="GotoTag">r_SP1</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto10" SID="3263">
+    <P Name="Position">[365, 320, 405, 350]</P>
+    <P Name="ZOrder">329</P>
+    <P Name="GotoTag">b_MB</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto11" SID="3264">
+    <P Name="Position">[365, 360, 405, 390]</P>
+    <P Name="ZOrder">330</P>
+    <P Name="GotoTag">h_MB</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto12" SID="3265">
+    <P Name="Position">[1165, 110, 1205, 140]</P>
+    <P Name="ZOrder">340</P>
+    <P Name="GotoTag">I_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto13" SID="3266">
+    <P Name="Position">[4025, 35, 4065, 65]</P>
+    <P Name="ZOrder">351</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">I_SC</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto14" SID="3267">
+    <P Name="Position">[2160, 5, 2245, 35]</P>
+    <P Name="ZOrder">353</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">gamma_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto16" SID="3268">
+    <P Name="Position">[2120, 355, 2160, 385]</P>
+    <P Name="ZOrder">368</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">alpha_P</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto17" SID="3269">
+    <P Name="Position">[3555, 305, 3595, 335]</P>
+    <P Name="ZOrder">371</P>
+    <P Name="GotoTag">I_SC</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="3270">
+    <P Name="Position">[2120, 275, 2160, 305]</P>
+    <P Name="ZOrder">306</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">SP_Rot</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="3271">
+    <P Name="Position">[1160, 395, 1200, 425]</P>
+    <P Name="ZOrder">307</P>
+    <P Name="GotoTag">r_SP2</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="3272">
+    <P Name="Position">[360, 85, 410, 115]</P>
+    <P Name="ZOrder">312</P>
+    <P Name="GotoTag">a_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto5" SID="3273">
+    <P Name="Position">[360, 125, 410, 155]</P>
+    <P Name="ZOrder">313</P>
+    <P Name="GotoTag">b_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto6" SID="3274">
+    <P Name="Position">[360, 165, 410, 195]</P>
+    <P Name="ZOrder">314</P>
+    <P Name="GotoTag">h_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto7" SID="3275">
+    <P Name="Position">[4025, 115, 4065, 145]</P>
+    <P Name="ZOrder">348</P>
+    <P Name="Commented">on</P>
+    <P Name="GotoTag">R_Diag</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto8" SID="3276">
+    <P Name="Position">[365, 240, 405, 270]</P>
+    <P Name="ZOrder">327</P>
+    <P Name="GotoTag">m_MB</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto9" SID="3277">
+    <P Name="Position">[365, 280, 405, 310]</P>
+    <P Name="ZOrder">328</P>
+    <P Name="GotoTag">a_MB</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="MATLAB Function" SID="3278">
+    <P Name="Ports">[1, 2]</P>
+    <P Name="Position">[3280, 344, 3350, 391]</P>
+    <P Name="ZOrder">373</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3278"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Main body" SID="3279">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[2590, 380, 2985, 555]</P>
+    <P Name="ZOrder">284</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3279"/>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="3300">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[2390, 126, 2430, 294]</P>
+    <P Name="ZOrder">285</P>
+    <P Name="Commented">on</P>
+    <P Name="Inputs">3</P>
+    <P Name="Multiplication">Matrix(*)</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="3301">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1565, 272, 1595, 303]</P>
+    <P Name="ZOrder">344</P>
+    <P Name="Commented">on</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="SP_Rotation from SP principal to MB principal" SID="3302">
+    <P Name="Ports">[2, 2]</P>
+    <P Name="Position">[1655, 252, 2040, 408]</P>
+    <P Name="ZOrder">283</P>
+    <P Name="Commented">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3302"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Solar panel" SID="3328">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[670, 34, 1060, 211]</P>
+    <P Name="ZOrder">282</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3328"/>
+  </Block>
+  <Block BlockType="Step" Name="Step" SID="3351">
+    <P Name="Position">[1445, 295, 1475, 325]</P>
+    <P Name="ZOrder">343</P>
+    <P Name="Commented">on</P>
+    <P Name="Time">1e-3</P>
+    <P Name="SampleTime">0</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="3352">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[3145, 360, 3165, 380]</P>
+    <P Name="ZOrder">292</P>
+    <P Name="IconShape">rectangular</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="3353">
+    <P Name="Position">[3370, 340, 3390, 360]</P>
+    <P Name="ZOrder">374</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Transport theorem" SID="3354">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[2585, 184, 2980, 346]</P>
+    <P Name="ZOrder">290</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3354"/>
+  </Block>
+  <Block BlockType="Math" Name="Transpose" SID="3368">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[2295, 139, 2325, 171]</P>
+    <P Name="ZOrder">286</P>
+    <P Name="Commented">on</P>
+    <P Name="Operator">transpose</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="gamma_SP" SID="3369">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1545, -108, 2110, 143]</P>
+    <P Name="ZOrder">347</P>
+    <P Name="Commented">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3369"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="r_SP" SID="3379">
+    <P Name="Ports">[2, 2]</P>
+    <P Name="Position">[665, 254, 1060, 461]</P>
+    <P Name="ZOrder">301</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3379"/>
+  </Block>
+  <Block BlockType="Outport" Name="r_SP1" SID="3391">
+    <P Name="Position">[3930, 463, 3960, 477]</P>
+    <P Name="ZOrder">296</P>
+  </Block>
+  <Block BlockType="Outport" Name="r_SP2" SID="3392">
+    <P Name="Position">[3930, 508, 3960, 522]</P>
+    <P Name="ZOrder">297</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="I_SC" SID="3393">
+    <P Name="Position">[3930, 403, 3960, 417]</P>
+    <P Name="ZOrder">280</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">3148#out:1</P>
+    <P Name="Dst">3152#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">3151#out:1</P>
+    <P Name="Dst">3261#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">3302#out:1</P>
+    <P Name="Dst">3270#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3368#out:1</P>
+    <P Name="Dst">3300#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3354#out:1</P>
+    <P Name="Points">[75, 0; 0, 100; 85, 0]</P>
+    <P Name="Dst">3352#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3244#out:1</P>
+    <P Name="Dst">3354#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">3279#out:1</P>
+    <P Name="Points">[75, 0; 0, -95]</P>
+    <P Name="Dst">3352#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">3239#out:1</P>
+    <P Name="Dst">3354#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">3379#out:1</P>
+    <P Name="Dst">3262#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">3240#out:1</P>
+    <P Name="Dst">3391#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">3251#out:1</P>
+    <P Name="Dst">3392#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">3379#out:2</P>
+    <P Name="Dst">3271#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">3151#out:2</P>
+    <P Name="Dst">3272#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">3151#out:3</P>
+    <P Name="Dst">3273#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">3151#out:4</P>
+    <P Name="Dst">3274#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">3256#out:1</P>
+    <P Name="Dst">3328#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">3257#out:1</P>
+    <P Name="Dst">3328#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">3255#out:1</P>
+    <P Name="Dst">3328#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">3258#out:1</P>
+    <P Name="Dst">3328#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">3260#out:1</P>
+    <P Name="Points">[15, 0]</P>
+    <Branch>
+      <P Name="ZOrder">21</P>
+      <P Name="Points">[0, -55]</P>
+      <P Name="Dst">3368#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">22</P>
+      <P Name="Points">[0, 55]</P>
+      <P Name="Dst">3300#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">3242#out:1</P>
+    <P Name="Dst">3379#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">3152#out:4</P>
+    <P Name="Dst">3264#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">25</P>
+    <P Name="Src">3152#out:3</P>
+    <P Name="Dst">3263#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">26</P>
+    <P Name="Src">3152#out:2</P>
+    <P Name="Dst">3277#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">27</P>
+    <P Name="Src">3152#out:1</P>
+    <P Name="Dst">3276#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">28</P>
+    <P Name="Src">3245#out:1</P>
+    <P Name="Dst">3279#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">29</P>
+    <P Name="Src">3246#out:1</P>
+    <P Name="Dst">3279#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">30</P>
+    <P Name="Src">3247#out:1</P>
+    <P Name="Dst">3279#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">31</P>
+    <P Name="Src">3248#out:1</P>
+    <P Name="Dst">3279#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">32</P>
+    <P Name="Src">3249#out:1</P>
+    <P Name="Dst">3379#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">33</P>
+    <P Name="Src">3328#out:1</P>
+    <P Name="Dst">3265#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">34</P>
+    <P Name="Src">3301#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">3302#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">35</P>
+    <P Name="Src">3259#out:1</P>
+    <P Name="Points">[30, 0; 0, 15]</P>
+    <P Name="Dst">3301#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">36</P>
+    <P Name="Src">3351#out:1</P>
+    <P Name="Points">[50, 0; 0, -15]</P>
+    <P Name="Dst">3301#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">37</P>
+    <P Name="Src">3149#out:1</P>
+    <P Name="Dst">3151#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">38</P>
+    <P Name="Src">3153#out:2</P>
+    <P Name="Dst">3275#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">39</P>
+    <P Name="Src">3243#out:1</P>
+    <P Name="Dst">3369#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">40</P>
+    <P Name="Src">3250#out:1</P>
+    <P Name="Dst">3369#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">41</P>
+    <P Name="Src">3153#out:1</P>
+    <P Name="Dst">3266#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">42</P>
+    <P Name="Src">3252#out:1</P>
+    <P Name="Dst">3393#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">43</P>
+    <P Name="Src">3369#out:1</P>
+    <P Name="Dst">3267#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">44</P>
+    <P Name="Src">3253#out:1</P>
+    <P Name="Dst">3302#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">45</P>
+    <P Name="Src">3302#out:2</P>
+    <P Name="Dst">3268#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">46</P>
+    <P Name="Src">3254#out:1</P>
+    <P Name="Dst">3153#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">47</P>
+    <P Name="Src">3241#out:1</P>
+    <P Name="Dst">3354#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">48</P>
+    <P Name="Src">3352#out:1</P>
+    <P Name="Dst">3278#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">49</P>
+    <P Name="Src">3278#out:1</P>
+    <P Name="Dst">3353#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">50</P>
+    <P Name="Src">3278#out:2</P>
+    <P Name="Dst">3150#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">51</P>
+    <P Name="Src">3150#out:1</P>
+    <P Name="Points">[58, 0]</P>
+    <Branch>
+      <P Name="ZOrder">52</P>
+      <P Name="Points">[0, -60]</P>
+      <P Name="Dst">3269#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">53</P>
+      <P Name="Points">[0, 115]</P>
+      <P Name="Dst">3238#in:1</P>
+    </Branch>
+  </Line>
+  <Annotation SID="3396">
+    <P Name="Name">I_SP is for 2 solar panels</P>
+    <P Name="Position">[1129, 66, 1241, 80]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="3395">
+    <P Name="Name">arcos(S_B*n solary)-pi/2 - attitude mainbodyx</P>
+    <P Name="Position">[1724, 438, 1926, 452]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-2</P>
+  </Annotation>
+  <Annotation SID="3394">
+    <P Name="Name">a lato corto, b lato lungo h spessore
+lato lungo asse x solar panel
+lato corto asse z solar panel
+lato lungo asse y main body
+lato corto asse x main body
+spessore asse z main body
+</P>
+    <P Name="Position">[305, -108, 465, -22]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-3</P>
+  </Annotation>
+</System>

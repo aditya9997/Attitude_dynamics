@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[523, 62, 1519, 821]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">150</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Constant" Name="Constant" SID="78">
+    <P Name="Position">[-290, 65, -260, 95]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Value">0.01</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="79">
+    <P Name="Position">[-290, 105, -260, 135]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Value">0.05</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="80">
+    <P Name="Position">[-290, 145, -260, 175]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Value">0.01</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="81">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[-160, 58, -155, 182]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape" SID="82">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[-55, 108, -25, 132]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Outport" Name="m_par" SID="83">
+    <P Name="Position">[60, 113, 90, 127]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">78#out:1</P>
+    <P Name="Dst">81#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">79#out:1</P>
+    <P Name="Dst">81#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">80#out:1</P>
+    <P Name="Dst">81#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">81#out:1</P>
+    <P Name="Dst">82#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">82#out:1</P>
+    <P Name="Dst">83#in:1</P>
+  </Line>
+</System>

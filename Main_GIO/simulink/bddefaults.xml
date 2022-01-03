@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockDiagramDefaults>
+  <MaskDefaults SelfModifiable="off">
+    <Display IconFrame="on" IconOpaque="opaque" RunInitForIconRedraw="analyze" IconRotate="none" PortRotate="default" IconUnits="autoscale"/>
+    <MaskParameter Evaluate="on" Tunable="on" NeverSave="off" Internal="off" ReadOnly="off" Enabled="on" Visible="on" ToolTip="on"/>
+    <DialogControl>
+      <ControlOptions Visible="on" Enabled="on" Row="new" HorizontalStretch="on" PromptLocation="top" Orientation="horizontal" Scale="linear" TextType="Plain Text" Expand="off" ShowFilter="on" ShowParameterName="on" WordWrap="on" AlignPrompts="off"/>
+    </DialogControl>
+  </MaskDefaults>
+  <BlockParameterDefaults>
+    <Block BlockType="ActionPort">
+      <P Name="InitializeStates">held</P>
+      <P Name="PropagateVarSize">Only when execution is resumed</P>
+      <P Name="DisallowConstTsAndPrmTs">off</P>
+      <P Name="ActionPortLabel">Action</P>
+    </Block>
+    <Block BlockType="Clock">
+      <P Name="DisplayTime">off</P>
+      <P Name="Decimation">10</P>
+    </Block>
+    <Block BlockType="ComplexToRealImag">
+      <P Name="Output">Real and imag</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="Concatenate">
+      <P Name="NumInputs">2</P>
+      <P Name="Mode">Vector</P>
+      <P Name="ConcatenateDimension">1</P>
+    </Block>
+    <Block BlockType="Constant">
+      <P Name="Value">1</P>
+      <P Name="VectorParams1D">on</P>
+      <P Name="SamplingMode">Sample based</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit from &apos;Constant value&apos;</P>
+      <P Name="LockScale">off</P>
+      <P Name="SampleTime">inf</P>
+      <P Name="FramePeriod">inf</P>
+      <P Name="PreserveConstantTs">off</P>
+    </Block>
+    <Block BlockType="Demux">
+      <P Name="Outputs">4</P>
+      <P Name="DisplayOption">bar</P>
+      <P Name="BusSelectionMode">off</P>
+    </Block>
+    <Block BlockType="Display">
+      <P Name="Format">short</P>
+      <P Name="Decimation">10</P>
+      <P Name="Floating">off</P>
+      <P Name="Lockdown">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="DotProduct">
+      <P Name="InputSameDT">on</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Same as first input</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="From">
+      <P Name="GotoTag">A</P>
+      <P Name="IconDisplay">Tag</P>
+      <P Name="TagVisibility">local</P>
+    </Block>
+    <Block BlockType="Gain">
+      <P Name="Gain">1</P>
+      <P Name="Multiplication">Element-wise(K.*u)</P>
+      <P Name="ParamMin">[]</P>
+      <P Name="ParamMax">[]</P>
+      <P Name="ParamDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="Goto">
+      <P Name="GotoTag">A</P>
+      <P Name="IconDisplay">Tag</P>
+      <P Name="TagVisibility">local</P>
+    </Block>
+    <Block BlockType="Ground"/>
+    <Block BlockType="If">
+      <P Name="NumInputs">1</P>
+      <P Name="IfExpression">u1 &gt; 0</P>
+      <P Name="ShowElse">on</P>
+      <P Name="ZeroCross">on</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="Inport">
+      <P Name="Port">1</P>
+      <P Name="AllowServiceAccess">off</P>
+      <P Name="IconDisplay">Port number</P>
+      <P Name="OutputFunctionCall">off</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: auto</P>
+      <P Name="LockScale">off</P>
+      <P Name="BusOutputAsStruct">off</P>
+      <P Name="Unit">inherit</P>
+      <P Name="PortDimensions">-1</P>
+      <P Name="VarSizeSig">Inherit</P>
+      <P Name="SampleTime">-1</P>
+      <P Name="SignalType">auto</P>
+      <P Name="SamplingMode">auto</P>
+      <P Name="LatchByDelayingOutsideSignal">off</P>
+      <P Name="LatchInputForFeedbackSignals">off</P>
+      <P Name="Interpolate">on</P>
+    </Block>
+    <Block BlockType="Integrator">
+      <P Name="ExternalReset">none</P>
+      <P Name="InitialConditionSource">internal</P>
+      <P Name="InitialCondition">0</P>
+      <P Name="LimitOutput">off</P>
+      <P Name="UpperSaturationLimit">inf</P>
+      <P Name="LowerSaturationLimit">-inf</P>
+      <P Name="WrapState">off</P>
+      <P Name="WrappedStateUpperValue">pi</P>
+      <P Name="WrappedStateLowerValue">-pi</P>
+      <P Name="ShowSaturationPort">off</P>
+      <P Name="ShowStatePort">off</P>
+      <P Name="AbsoluteTolerance">auto</P>
+      <P Name="IgnoreLimit">off</P>
+      <P Name="ZeroCross">on</P>
+      <P Name="ContinuousStateAttributes">&apos;&apos;</P>
+    </Block>
+    <Block BlockType="Math">
+      <P Name="Operator">exp</P>
+      <P Name="AlgorithmMethod">Exact</P>
+      <P Name="SignedPower">off</P>
+      <P Name="OutputSignalType">auto</P>
+      <P Name="SampleTime">-1</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Same as first input</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">on</P>
+      <P Name="IntermediateResultsDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="AlgorithmType">Newton-Raphson</P>
+      <P Name="Iterations">3</P>
+    </Block>
+    <Block BlockType="Merge">
+      <P Name="Inputs">2</P>
+      <P Name="InitialOutput">[]</P>
+      <P Name="AllowUnequalInputPortWidths">off</P>
+      <P Name="InputPortOffsets">[]</P>
+    </Block>
+    <Block BlockType="Mux">
+      <P Name="Inputs">4</P>
+      <P Name="DisplayOption">none</P>
+      <P Name="UseBusObject">off</P>
+      <P Name="BusObject">BusObject</P>
+      <P Name="NonVirtualBus">off</P>
+    </Block>
+    <Block BlockType="Outport">
+      <P Name="Port">1</P>
+      <P Name="AllowServiceAccess">off</P>
+      <P Name="IconDisplay">Port number</P>
+      <P Name="OutputFunctionCall">off</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: auto</P>
+      <P Name="LockScale">off</P>
+      <P Name="BusOutputAsStruct">off</P>
+      <P Name="Unit">inherit</P>
+      <P Name="PortDimensions">-1</P>
+      <P Name="VarSizeSig">Inherit</P>
+      <P Name="SampleTime">-1</P>
+      <P Name="SignalType">auto</P>
+      <P Name="SamplingMode">auto</P>
+      <P Name="EnsureOutportIsVirtual">off</P>
+      <P Name="SourceOfInitialOutputValue">Dialog</P>
+      <P Name="OutputWhenDisabled">held</P>
+      <P Name="InitialOutput">[]</P>
+      <P Name="MustResolveToSignalObject">off</P>
+      <P Name="OutputWhenUnConnected">off</P>
+      <P Name="OutputWhenUnconnectedValue">0</P>
+      <P Name="VectorParamsAs1DForOutWhenUnconnected">on</P>
+    </Block>
+    <Block BlockType="Product">
+      <P Name="Inputs">2</P>
+      <P Name="Multiplication">Element-wise(.*)</P>
+      <P Name="CollapseMode">All dimensions</P>
+      <P Name="CollapseDim">1</P>
+      <P Name="InputSameDT">off</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="Reshape">
+      <P Name="OutputDimensionality">1-D array</P>
+      <P Name="OutputDimensions">[1,1]</P>
+    </Block>
+    <Block BlockType="S-Function">
+      <P Name="FunctionName">system</P>
+      <P Name="SFunctionModules">&apos;&apos;</P>
+      <P Name="PortCounts">[]</P>
+      <P Name="MultithreadedSim">auto</P>
+    </Block>
+    <Block BlockType="Scope">
+      <P Name="DefaultConfigurationName">Simulink.scopes.TimeScopeBlockCfg</P>
+    </Block>
+    <Block BlockType="Selector">
+      <P Name="NumberOfDimensions">1</P>
+      <P Name="IndexMode">One-based</P>
+      <P Name="InputPortWidth">-1</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="Sqrt">
+      <P Name="Operator">sqrt</P>
+      <P Name="OutputSignalType">auto</P>
+      <P Name="SampleTime">-1</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Same as first input</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">on</P>
+      <P Name="IntermediateResultsDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="AlgorithmType">Exact</P>
+      <P Name="Iterations">3</P>
+    </Block>
+    <Block BlockType="Step">
+      <P Name="Time">1</P>
+      <P Name="Before">0</P>
+      <P Name="After">1</P>
+      <P Name="OutDataTypeStr">double</P>
+      <P Name="SampleTime">-1</P>
+      <P Name="VectorParams1D">on</P>
+      <P Name="ZeroCross">on</P>
+    </Block>
+    <Block BlockType="SubSystem">
+      <P Name="ShowPortLabels">FromPortIcon</P>
+      <P Name="Permissions">ReadWrite</P>
+      <P Name="PermitHierarchicalResolution">All</P>
+      <P Name="TreatAsAtomicUnit">off</P>
+      <P Name="MinAlgLoopOccurrences">off</P>
+      <P Name="ScheduleAs">Sample time</P>
+      <P Name="SystemSampleTime">-1</P>
+      <P Name="RTWSystemCode">Auto</P>
+      <P Name="RTWFcnNameOpts">Auto</P>
+      <P Name="RTWFileNameOpts">Auto</P>
+      <P Name="FunctionInterfaceSpec">void_void</P>
+      <P Name="FunctionWithSeparateData">off</P>
+      <P Name="MatchGraphicalInterface">off</P>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="SimViewingDevice">off</P>
+      <P Name="DataTypeOverride">UseLocalSettings</P>
+      <P Name="DataTypeOverrideAppliesTo">AllNumericTypes</P>
+      <P Name="MinMaxOverflowLogging">UseLocalSettings</P>
+      <P Name="Opaque">off</P>
+      <P Name="MaskHideContents">off</P>
+      <P Name="SFBlockType">NONE</P>
+      <P Name="Variant">off</P>
+      <P Name="VariantControlMode">expression</P>
+      <P Name="VariantActivationTime">update diagram</P>
+      <P Name="AllowZeroVariantControls">off</P>
+      <P Name="PropagateVariantConditions">off</P>
+      <P Name="TreatAsGroupedWhenPropagatingVariantConditions">on</P>
+      <P Name="ContentPreviewEnabled">off</P>
+      <P Name="IsWebBlock">off</P>
+      <P Name="IsInjectorSS">off</P>
+      <P Name="Latency">0</P>
+      <P Name="AutoFrameSizeCalculation">off</P>
+      <P Name="IsWebBlockPanel">off</P>
+    </Block>
+    <Block BlockType="Sum">
+      <P Name="IconShape">round</P>
+      <P Name="Inputs">++</P>
+      <P Name="CollapseMode">All dimensions</P>
+      <P Name="CollapseDim">1</P>
+      <P Name="InputSameDT">off</P>
+      <P Name="AccumDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="Terminator"/>
+    <Block BlockType="Trigonometry">
+      <P Name="Operator">sin</P>
+      <P Name="ApproximationMethod">None</P>
+      <P Name="NumberOfIterations">11</P>
+      <P Name="OutputSignalType">auto</P>
+      <P Name="AngleUnit">radian</P>
+      <P Name="NumberOfDataPoints">16</P>
+      <P Name="RemoveProtectionAgainstOutOfRangeInput">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+  </BlockParameterDefaults>
+</BlockDiagramDefaults>

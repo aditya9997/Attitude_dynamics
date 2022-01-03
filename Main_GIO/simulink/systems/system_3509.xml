@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">194</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="theta" SID="3510">
+    <P Name="Position">[-85, -37, -55, -23]</P>
+    <P Name="ZOrder">481</P>
+  </Block>
+  <Block BlockType="Inport" Name="i" SID="3611">
+    <P Name="Position">[-85, 73, -55, 87]</P>
+    <P Name="ZOrder">485</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Product" Name="MatrixMultiply" SID="3554">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[190, -86, 245, 136]</P>
+    <P Name="ZOrder">483</P>
+    <P Name="Multiplication">Matrix(*)</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="inclination matrix" SID="3533">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[5, 50, 130, 110]</P>
+    <P Name="ZOrder">482</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3533"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="true anomaly matrix" SID="3512">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[5, -60, 130, 0]</P>
+    <P Name="ZOrder">480</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_3512"/>
+  </Block>
+  <Block BlockType="Outport" Name="A_L_N" SID="3555">
+    <P Name="Position">[330, 18, 360, 32]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">3510#out:1</P>
+    <P Name="Dst">3512#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">3512#out:1</P>
+    <P Name="Dst">3554#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">3533#out:1</P>
+    <P Name="Dst">3554#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3554#out:1</P>
+    <P Name="Dst">3555#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3611#out:1</P>
+    <P Name="Dst">3533#in:1</P>
+  </Line>
+</System>

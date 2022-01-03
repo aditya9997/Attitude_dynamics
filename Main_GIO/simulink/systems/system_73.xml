@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[523, 62, 1519, 821]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">78</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="R" SID="74">
+    <P Name="Position">[-270, 143, -240, 157]</P>
+    <P Name="ZOrder">5</P>
+  </Block>
+  <Block BlockType="Inport" Name="A_BN" SID="75">
+    <P Name="Position">[-270, 68, -240, 82]</P>
+    <P Name="ZOrder">195</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="r_LVLH" SID="76">
+    <P Name="Position">[-270, 218, -240, 232]</P>
+    <P Name="ZOrder">345</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Reference" Name="Cross Product" SID="84">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[520, -43, 585, 93]</P>
+    <P Name="ZOrder">343</P>
+    <P Name="LibraryVersion">3.23</P>
+    <P Name="SourceBlock">matrix_library/Cross Product</P>
+    <P Name="SourceType">CrossProduct</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="From" Name="From" SID="3415">
+    <P Name="Position">[430, -24, 470, 4]</P>
+    <P Name="ZOrder">349</P>
+    <P Name="GotoTag">m_par</P>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="3416">
+    <P Name="Position">[430, 46, 470, 74]</P>
+    <P Name="ZOrder">350</P>
+    <P Name="GotoTag">b_B</P>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="3418">
+    <P Name="Position">[675, 171, 715, 199]</P>
+    <P Name="ZOrder">352</P>
+    <P Name="GotoTag">b_N</P>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="3422">
+    <P Name="Position">[-50, 61, -10, 89]</P>
+    <P Name="ZOrder">356</P>
+    <P Name="GotoTag">A_BN</P>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="3423">
+    <P Name="Position">[-50, 136, -10, 164]</P>
+    <P Name="ZOrder">357</P>
+    <P Name="GotoTag">R</P>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="3424">
+    <P Name="Position">[-50, 211, -10, 239]</P>
+    <P Name="ZOrder">358</P>
+    <P Name="GotoTag">r_LVLH</P>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="3426">
+    <P Name="Position">[425, -114, 480, -86]</P>
+    <P Name="ZOrder">360</P>
+    <P Name="GotoTag">A_BN</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="3412">
+    <P Name="Position">[280, -95, 335, -65]</P>
+    <P Name="ZOrder">346</P>
+    <P Name="GotoTag">m_par</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="3413">
+    <P Name="Position">[285, 80, 325, 110]</P>
+    <P Name="ZOrder">347</P>
+    <P Name="GotoTag">b_B</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="3414">
+    <P Name="Position">[285, 190, 325, 220]</P>
+    <P Name="ZOrder">348</P>
+    <P Name="GotoTag">b_N</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="3419">
+    <P Name="Position">[-200, 60, -160, 90]</P>
+    <P Name="ZOrder">353</P>
+    <P Name="GotoTag">A_BN</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="3420">
+    <P Name="Position">[-200, 135, -160, 165]</P>
+    <P Name="ZOrder">354</P>
+    <P Name="GotoTag">R</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto5" SID="3421">
+    <P Name="Position">[-200, 210, -140, 240]</P>
+    <P Name="ZOrder">355</P>
+    <P Name="GotoTag">r_LVLH</P>
+  </Block>
+  <Block BlockType="Product" Name="Matrix Multiply" SID="3425">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[640, -164, 755, 89]</P>
+    <P Name="ZOrder">359</P>
+    <P Name="Multiplication">Matrix(*)</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="b_B" SID="85">
+    <P Name="Ports">[3, 2]</P>
+    <P Name="Position">[45, 39, 245, 261]</P>
+    <P Name="ZOrder">194</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_85"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="parasitic torque" SID="77">
+    <P Name="Ports">[0, 1]</P>
+    <P Name="Position">[35, -133, 245, -27]</P>
+    <P Name="ZOrder">196</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_77"/>
+  </Block>
+  <Block BlockType="Outport" Name="T_B" SID="135">
+    <P Name="Position">[810, -42, 840, -28]</P>
+    <P Name="ZOrder">198</P>
+  </Block>
+  <Block BlockType="Outport" Name="b_N" SID="136">
+    <P Name="Position">[810, 178, 840, 192]</P>
+    <P Name="ZOrder">344</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">77#out:1</P>
+    <P Name="Dst">3412#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">85#out:1</P>
+    <P Name="Dst">3413#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">85#out:2</P>
+    <P Name="Dst">3414#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">3415#out:1</P>
+    <P Name="Dst">84#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">3416#out:1</P>
+    <P Name="Dst">84#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">3418#out:1</P>
+    <P Name="Dst">136#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">75#out:1</P>
+    <P Name="Dst">3419#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">74#out:1</P>
+    <P Name="Dst">3420#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">76#out:1</P>
+    <P Name="Dst">3421#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">3422#out:1</P>
+    <P Name="Dst">85#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">3423#out:1</P>
+    <P Name="Dst">85#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">3424#out:1</P>
+    <P Name="Dst">85#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">3425#out:1</P>
+    <P Name="Dst">135#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">84#out:1</P>
+    <P Name="Dst">3425#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">3426#out:1</P>
+    <P Name="Dst">3425#in:1</P>
+  </Line>
+</System>

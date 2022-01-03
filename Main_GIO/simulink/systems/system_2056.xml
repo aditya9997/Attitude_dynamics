@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">80</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="P" SID="2057">
+    <P Name="Position">[110, 103, 140, 117]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Inport" Name="NSP_true" SID="2058">
+    <P Name="Position">[110, 148, 140, 162]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="A_vect_SP" SID="2059">
+    <P Name="Position">[110, 193, 140, 207]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="rho_d_SP" SID="2060">
+    <P Name="Position">[110, 238, 140, 252]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Inport" Name="rho_s_SP" SID="2061">
+    <P Name="Position">[105, 283, 135, 297]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="Inport" Name="S_B" SID="2062">
+    <P Name="Position">[110, 333, 140, 347]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add" SID="2063">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[550, 500, 580, 600]</P>
+    <P Name="ZOrder">23</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+-</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add1" SID="2064">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[750, 727, 795, 1083]</P>
+    <P Name="ZOrder">32</P>
+    <P Name="IconShape">rectangular</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add2" SID="2065">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[995, 373, 1040, 1257]</P>
+    <P Name="ZOrder">37</P>
+    <P Name="IconShape">rectangular</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="2066">
+    <P Name="Position">[440, 510, 470, 540]</P>
+    <P Name="ZOrder">21</P>
+  </Block>
+  <Block BlockType="DotProduct" Name="Dot Product" SID="2067">
+    <P Name="Position">[1000, 179, 1035, 266]</P>
+    <P Name="ZOrder">18</P>
+    <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+  </Block>
+  <Block BlockType="DotProduct" Name="Dot Product1" SID="2068">
+    <P Name="Position">[550, 809, 585, 896]</P>
+    <P Name="ZOrder">28</P>
+    <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="2069">
+    <P Name="Position">[420, -969, 460, -941]</P>
+    <P Name="ZOrder">15</P>
+    <P Name="GotoTag">P</P>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="2070">
+    <P Name="Position">[420, -382, 490, -348]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="GotoTag">A_vect_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From10" SID="2071">
+    <P Name="Position">[415, 1148, 485, 1182]</P>
+    <P Name="ZOrder">36</P>
+    <P Name="GotoTag">NSP_true</P>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="2072">
+    <P Name="Position">[425, 228, 495, 262]</P>
+    <P Name="ZOrder">19</P>
+    <P Name="GotoTag">S_B</P>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="2073">
+    <P Name="Position">[425, 183, 495, 217]</P>
+    <P Name="ZOrder">20</P>
+    <P Name="GotoTag">NSP_true</P>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="2074">
+    <P Name="Position">[415, 561, 490, 589]</P>
+    <P Name="ZOrder">22</P>
+    <P Name="GotoTag">rho_s_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="2075">
+    <P Name="Position">[430, 621, 470, 649]</P>
+    <P Name="ZOrder">25</P>
+    <P Name="GotoTag">S_B</P>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="2076">
+    <P Name="Position">[410, 756, 485, 784]</P>
+    <P Name="ZOrder">26</P>
+    <P Name="GotoTag">rho_s_SP</P>
+  </Block>
+  <Block BlockType="From" Name="From7" SID="2077">
+    <P Name="Position">[410, 858, 480, 892]</P>
+    <P Name="ZOrder">29</P>
+    <P Name="GotoTag">S_B</P>
+  </Block>
+  <Block BlockType="From" Name="From8" SID="2078">
+    <P Name="Position">[410, 813, 480, 847]</P>
+    <P Name="ZOrder">30</P>
+    <P Name="GotoTag">NSP_true</P>
+  </Block>
+  <Block BlockType="From" Name="From9" SID="2079">
+    <P Name="Position">[410, 981, 485, 1009]</P>
+    <P Name="ZOrder">33</P>
+    <P Name="GotoTag">rho_d_SP</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain" SID="2080">
+    <P Name="Position">[750, -970, 780, -940]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Gain">-1</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain1" SID="2081">
+    <P Name="Position">[555, 755, 585, 785]</P>
+    <P Name="ZOrder">27</P>
+    <P Name="Gain">2</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain2" SID="2082">
+    <P Name="Position">[660, 980, 690, 1010]</P>
+    <P Name="ZOrder">34</P>
+    <P Name="Gain">2/3</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="2083">
+    <P Name="Position">[190, 95, 230, 125]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="GotoTag">P</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="2084">
+    <P Name="Position">[190, 140, 265, 170]</P>
+    <P Name="ZOrder">7</P>
+    <P Name="GotoTag">NSP_true</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="2085">
+    <P Name="Position">[190, 185, 275, 215]</P>
+    <P Name="ZOrder">8</P>
+    <P Name="GotoTag">A_vect_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="2086">
+    <P Name="Position">[190, 230, 265, 260]</P>
+    <P Name="ZOrder">12</P>
+    <P Name="GotoTag">rho_d_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="2087">
+    <P Name="Position">[190, 275, 265, 305]</P>
+    <P Name="ZOrder">10</P>
+    <P Name="GotoTag">rho_s_SP</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto5" SID="2088">
+    <P Name="Position">[190, 325, 230, 355]</P>
+    <P Name="ZOrder">11</P>
+    <P Name="GotoTag">S_B</P>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="2089">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[1105, -1252, 1165, 1112]</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Inputs">4</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="2090">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[695, 509, 730, 676]</P>
+    <P Name="ZOrder">24</P>
+  </Block>
+  <Block BlockType="Product" Name="Product2" SID="2091">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[655, 726, 700, 899]</P>
+    <P Name="ZOrder">31</P>
+  </Block>
+  <Block BlockType="Product" Name="Product3" SID="2092">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[890, 774, 925, 1296]</P>
+    <P Name="ZOrder">35</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape" SID="2093">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1240, -82, 1270, -58]</P>
+    <P Name="ZOrder">271</P>
+    <P Name="OutputDimensionality">Row vector (2-D)</P>
+  </Block>
+  <Block BlockType="Math" Name="Transpose" SID="2094">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[610, 1149, 640, 1181]</P>
+    <P Name="ZOrder">270</P>
+    <P Name="Operator">transpose</P>
+  </Block>
+  <Block BlockType="Outport" Name="F_SP" SID="2095">
+    <P Name="Position">[1355, -77, 1385, -63]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">2057#out:1</P>
+    <P Name="Dst">2083#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">2058#out:1</P>
+    <P Name="Dst">2084#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">2059#out:1</P>
+    <P Name="Dst">2085#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">2060#out:1</P>
+    <P Name="Dst">2086#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">2061#out:1</P>
+    <P Name="Dst">2087#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">2062#out:1</P>
+    <P Name="Dst">2088#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">2089#out:1</P>
+    <P Name="Dst">2093#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">2069#out:1</P>
+    <P Name="Dst">2080#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">2080#out:1</P>
+    <P Name="Dst">2089#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">2070#out:1</P>
+    <P Name="Dst">2089#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">2067#out:1</P>
+    <P Name="Dst">2089#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">2072#out:1</P>
+    <P Name="Dst">2067#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">2073#out:1</P>
+    <P Name="Dst">2067#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">2066#out:1</P>
+    <P Name="Dst">2063#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">2074#out:1</P>
+    <P Name="Dst">2063#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">2063#out:1</P>
+    <P Name="Dst">2090#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">2075#out:1</P>
+    <P Name="Dst">2090#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">2076#out:1</P>
+    <P Name="Dst">2081#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">2078#out:1</P>
+    <P Name="Dst">2068#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">2077#out:1</P>
+    <P Name="Dst">2068#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">2068#out:1</P>
+    <P Name="Dst">2091#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">2081#out:1</P>
+    <P Name="Dst">2091#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">2091#out:1</P>
+    <P Name="Dst">2064#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">2079#out:1</P>
+    <P Name="Dst">2082#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">25</P>
+    <P Name="Src">2082#out:1</P>
+    <P Name="Dst">2064#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">26</P>
+    <P Name="Src">2071#out:1</P>
+    <P Name="Dst">2094#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">27</P>
+    <P Name="Src">2064#out:1</P>
+    <P Name="Dst">2092#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">28</P>
+    <P Name="Src">2090#out:1</P>
+    <P Name="Dst">2065#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">29</P>
+    <P Name="Src">2092#out:1</P>
+    <P Name="Dst">2065#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">30</P>
+    <P Name="Src">2094#out:1</P>
+    <P Name="Dst">2092#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">31</P>
+    <P Name="Src">2065#out:1</P>
+    <P Name="Dst">2089#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">32</P>
+    <P Name="Src">2093#out:1</P>
+    <P Name="Dst">2095#in:1</P>
+  </Line>
+</System>

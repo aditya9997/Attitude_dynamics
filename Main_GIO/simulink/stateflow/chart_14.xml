@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart id="14">
+  <P Name="name">Enviroment/Magnetic field/b_B/MATLAB Function</P>
+  <P Name="windowPosition">[422 539.941 189 413]</P>
+  <P Name="viewLimits">[0 156.75 0 153.75]</P>
+  <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
+  <P Name="viewObj">14</P>
+  <subviewS/>
+  <P Name="ssIdHighWaterMark">12</P>
+  <P Name="decomposition">CLUSTER_CHART</P>
+  <P Name="type">EML_CHART</P>
+  <P Name="chartFileNumber">2</P>
+  <P Name="disableImplicitCasting">1</P>
+  <eml>
+    <P Name="name">magnet</P>
+  </eml>
+  <Children>
+    <state SSID="1">
+      <P Name="labelString">eML_blk_kernel()</P>
+      <P Name="position">[18 64.5 118 66]</P>
+      <P Name="fontSize">12</P>
+      <P Name="superState">SUBCHART</P>
+      <P Name="subviewer">14</P>
+      <P Name="type">FUNC_STATE</P>
+      <P Name="decomposition">CLUSTER_STATE</P>
+      <eml>
+        <P Name="isEML">1</P>
+        <P Name="script">function b_N  = magnet(r_LVLH, r, t, G, H)
+% Inputs
+% r Geocentric radius
+% theta Latitude measured in degrees positive from equator
+% phi Longitude measured in degrees positive east from Greenwich
+%
+% Outputs - magnetic field strength in local tangential coordinates
+% Br B in radial direction
+% Bt B in theta direction
+% Bp B in phi direction
+
+% Computing the right ascension alpha, the declination delta, the longitude lon and the co-latitude phi
+r_norm = norm(r_LVLH);
+delta = asin(r_LVLH(3)/r_norm);
+if(r_LVLH(2)/r_norm &gt; 0)
+    alpha = acos((r_LVLH(1)/r_norm)/cos(delta));
+else 
+    alpha = 2*pi -  acos((r_LVLH(1)/r_norm)/cos(delta));
+end
+theta = -delta;
+om_E = deg2rad(15.04)/3600;
+Gren_lon = om_E*t;
+phi = (alpha - Gren_lon);
+
+% Checks to see if located at either pole to avoid singularities
+if (theta&gt;-0.00000001 &amp;&amp; theta&lt;0.00000001)
+theta=0.00000001;
+elseif(theta&lt;180.00000001 &amp;&amp; theta&gt;179.99999999)
+theta=179.99999999;
+end
+% The angles must be converted from degrees into radians
+theta=(90-theta)*pi/180;
+phi = phi*pi/180;
+a=6371.2; % Reference radius used in IGRF
+% This section of the code simply reads in the g and h Schmidt
+% quasi-normalized coefficients
+gn = G(:,1);
+gm = G(:,2);
+gvali = G(:,3);
+hn = H(:,1);
+hm = H(:,2);
+hvali = H(:,3);
+%[gn, gm, gvali, ~] = textread(&apos;igrfSg.txt&apos;,&apos;%f %f %f %f&apos;);
+%[hn, hm, hvali, ~]= textread(&apos;igrfSh.txt&apos;,&apos;%f %f %f %f&apos;);
+N=max(gn);
+g=zeros(N,N+1);
+h=zeros(N,N+1);
+for x=1:length(gn)
+g(gn(x),gm(x)+1) = gvali(x);
+h(hn(x),hm(x)+1) = hvali(x);
+end
+% Initialize each of the variables
+% Br B in the radial driection
+% Bt B in the theta direction
+% Bp B in the phi direction
+% P The associated Legendre polynomial evaluated at cos(theta)
+% The nomenclature for the recursive values generally follows
+% the form P10 = P(n-1,m-0)
+% dP The partial derivative of P with respect to theta
+Br=0; Bt=0; Bp=0;
+P11=1; P10=P11;
+dP11=0; dP10=dP11;
+for m=0:N
+for n=1:N
+if m&lt;=n
+% Calculate Legendre polynomials and derivatives recursively
+if n==m
+P2 = sin(theta)*P11;
+dP2 = sin(theta)*dP11 + cos(theta)*P11;
+P11=P2; P10=P11; P20=0;
+dP11=dP2; dP10=dP11; dP20=0;
+elseif n==1
+P2 = cos(theta)*P10;
+dP2 = cos(theta)*dP10 - sin(theta)*P10;
+P20=P10; P10=P2;
+dP20=dP10; dP10=dP2;
+else
+P20=P10;
+dP20=dP10;
+K = ((n-1)^2-m^2)/((2*n-1)*(2*n-3));
+P2 = cos(theta)*P10 - K*P20;
+dP2 = cos(theta)*dP10 - sin(theta)*P10 - K*dP20;
+P10=P2;
+dP10=dP2;
+end
+% Calculate Br, Bt, and Bp
+Br = Br + (a/r)^(n+2)*(n+1)*...
+((g(n,m+1)*cos(m*phi) + h(n,m+1)*sin(m*phi))*P2);
+Bt = Bt + (a/r)^(n+2)*...
+((g(n,m+1)*cos(m*phi) + h(n,m+1)*sin(m*phi))*dP2);
+Bp = Bp + (a/r)^(n+2)*...
+(m*(-g(n,m+1)*sin(m*phi) + h(n,m+1)*cos(m*phi))* P2);
+end
+end
+end
+% Spherical coordinates
+Br = Br;
+Bt = -Bt;
+Bp = -Bp / sin(theta);
+
+% Inertial cartesian coordinates
+LST = Gren_lon + phi;
+lat = theta;
+Bx = (Br*cos(lat)+Bt*sin(lat))*cos(LST) - Bp*sin(LST);
+By = (Br*cos(lat)+Bt*sin(lat))*sin(LST) + Bp*cos(LST);
+Bz = (Br*sin(lat)+Bt*cos(lat));
+
+b_N = [Bx; By; Bz];
+
+end
+</P>
+      </eml>
+    </state>
+    <data SSID="6" name="r_LVLH">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+          <P Name="isSigned">1</P>
+          <P Name="wordLength">16</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <P Name="frame">SF_FRAME_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="4" name="r">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="5" name="b_N">
+      <P Name="scope">OUTPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <P Name="frame">SF_FRAME_NO</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="7" name="t">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+          <P Name="isSigned">1</P>
+          <P Name="wordLength">16</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <P Name="frame">SF_FRAME_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="11" name="G">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+          <P Name="isSigned">1</P>
+          <P Name="wordLength">16</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <P Name="frame">SF_FRAME_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="12" name="H">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+          <P Name="isSigned">1</P>
+          <P Name="wordLength">16</P>
+        </type>
+        <P Name="complexity">SF_COMPLEX_INHERITED</P>
+        <P Name="frame">SF_FRAME_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <transition SSID="2">
+      <P Name="labelString">{eML_blk_kernel();}</P>
+      <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
+      <P Name="fontSize">12</P>
+      <src>
+        <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
+      </src>
+      <dst>
+        <P Name="SSID">3</P>
+        <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
+      </dst>
+      <P Name="midPoint">[23.5747 24.9468]</P>
+      <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
+      <P Name="subviewer">14</P>
+      <P Name="drawStyle">SMART</P>
+      <slide>
+        <P Name="sticky">BOTH_STICK</P>
+      </slide>
+      <P Name="executionOrder">1</P>
+    </transition>
+    <junction SSID="3">
+      <P Name="position">[23.5747 49.5747 7]</P>
+      <P Name="subviewer">14</P>
+      <P Name="type">CONNECTIVE_JUNCTION</P>
+    </junction>
+  </Children>
+</chart>

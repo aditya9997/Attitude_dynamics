@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-9, 0, 865, 830]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Constant" Name="Constant6" SID="2145">
+    <P Name="Position">[205, 110, 235, 140]</P>
+    <P Name="ZOrder">596</P>
+    <P Name="Value">1358</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant7" SID="2146">
+    <P Name="Position">[205, 170, 235, 200]</P>
+    <P Name="ZOrder">597</P>
+    <P Name="Value">c</P>
+  </Block>
+  <Block BlockType="Product" Name="Product8" SID="2147">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[500, 147, 530, 178]</P>
+    <P Name="ZOrder">598</P>
+  </Block>
+  <Block BlockType="Product" Name="Reciprocal" SID="2148">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[295, 169, 325, 201]</P>
+    <P Name="ZOrder">599</P>
+    <P Name="Inputs">/</P>
+  </Block>
+  <Block BlockType="Outport" Name="P" SID="2149">
+    <P Name="Position">[625, 158, 655, 172]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">2145#out:1</P>
+    <P Name="Points">[160, 0; 0, 30]</P>
+    <P Name="Dst">2147#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">2148#out:1</P>
+    <P Name="Points">[70, 0; 0, -15]</P>
+    <P Name="Dst">2147#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">2147#out:1</P>
+    <P Name="Dst">2149#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">2146#out:1</P>
+    <P Name="Dst">2148#in:1</P>
+  </Line>
+</System>

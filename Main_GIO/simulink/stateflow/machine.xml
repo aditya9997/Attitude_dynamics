@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Stateflow>
+  <machine id="13">
+    <P Name="sfVersion">80000046</P>
+    <Children>
+      <target id="33" name="sfun">
+        <P Name="description">Default Simulink S-Function Target.</P>
+      </target>
+      <chart Ref="chart_14"/>
+      <chart Ref="chart_25"/>
+    </Children>
+  </machine>
+  <instance id="24">
+    <P Name="machine">13</P>
+    <P Name="name">Enviroment/Magnetic field/b_B/MATLAB Function</P>
+    <P Name="chart">14</P>
+  </instance>
+  <instance id="32">
+    <P Name="machine">13</P>
+    <P Name="name">Inertia matrix/MATLAB Function</P>
+    <P Name="chart">25</P>
+  </instance>
+</Stateflow>

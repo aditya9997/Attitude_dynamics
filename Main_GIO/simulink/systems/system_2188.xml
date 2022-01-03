@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-16, 2, 978, 760]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="NMB" SID="2189">
+    <P Name="Position">[25, 133, 55, 147]</P>
+    <P Name="ZOrder">1</P>
+  </Block>
+  <Block BlockType="ActionPort" Name="Action Port" SID="2190">
+    <P Name="Position">[170, 15, 229, 43]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="2191">
+    <P Name="Position">[25, 170, 55, 200]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Value">-1</P>
+  </Block>
+  <Block BlockType="Selector" Name="Selector" SID="2192">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[160, 121, 200, 159]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="NumberOfDimensions">2</P>
+    <P Name="InputPortWidth">3</P>
+    <P Name="IndexOptions">Index vector (dialog),Index vector (dialog)</P>
+    <P Name="Indices">4,[1 2 3]</P>
+    <P Name="OutputSizes">1,1</P>
+  </Block>
+  <Block BlockType="Outport" Name="-x" SID="2193">
+    <P Name="Position">[305, 133, 335, 147]</P>
+    <P Name="ZOrder">-3</P>
+  </Block>
+  <Block BlockType="Outport" Name="pointer" SID="2194">
+    <P Name="Position">[305, 178, 335, 192]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">2192#out:1</P>
+    <P Name="Dst">2193#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">2189#out:1</P>
+    <P Name="Dst">2192#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">2191#out:1</P>
+    <P Name="Dst">2194#in:1</P>
+  </Line>
+</System>

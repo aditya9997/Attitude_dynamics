@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">150</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Areas_vect" SID="3033">
+    <P Name="Position">[-120, 323, -90, 337]</P>
+    <P Name="ZOrder">595</P>
+  </Block>
+  <Block BlockType="Inport" Name="MB" SID="3034">
+    <P Name="Position">[-185, 543, -155, 557]</P>
+    <P Name="ZOrder">688</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="ActionPort" Name="Action Port" SID="3035">
+    <P Name="Position">[470, 120, 529, 148]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add" SID="3036">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[420, 251, 505, 419]</P>
+    <P Name="ZOrder">603</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+|-</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add1" SID="3037">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[420, 576, 505, 744]</P>
+    <P Name="ZOrder">661</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+|-</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add2" SID="3038">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1180, 394, 1200, 596]</P>
+    <P Name="ZOrder">669</P>
+    <P Name="IconShape">rectangular</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux2" SID="3039">
+    <P Name="Ports">[1, 4]</P>
+    <P Name="Position">[-120, 473, -115, 622]</P>
+    <P Name="ZOrder">689</P>
+  </Block>
+  <Block BlockType="Product" Name="Divide" SID="3040">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[215, 352, 280, 423]</P>
+    <P Name="ZOrder">600</P>
+    <P Name="Inputs">*/</P>
+  </Block>
+  <Block BlockType="Product" Name="Divide1" SID="3041">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[215, 677, 280, 748]</P>
+    <P Name="ZOrder">658</P>
+    <P Name="Inputs">*/</P>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="3042">
+    <P Name="Position">[125, 716, 165, 744]</P>
+    <P Name="ZOrder">666</P>
+    <P Name="GotoTag">a_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="3043">
+    <P Name="Position">[230, 591, 270, 619]</P>
+    <P Name="ZOrder">667</P>
+    <P Name="GotoTag">b_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="3044">
+    <P Name="Position">[130, 391, 170, 419]</P>
+    <P Name="ZOrder">598</P>
+    <P Name="GotoTag">b_MB</P>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="3045">
+    <P Name="Position">[230, 266, 270, 294]</P>
+    <P Name="ZOrder">599</P>
+    <P Name="GotoTag">a_MB</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain" SID="3046">
+    <P Name="Position">[330, 265, 360, 295]</P>
+    <P Name="ZOrder">601</P>
+    <P Name="Gain">1/2</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain1" SID="3047">
+    <P Name="Position">[330, 375, 360, 405]</P>
+    <P Name="ZOrder">602</P>
+    <P Name="Gain">1/2</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain2" SID="3048">
+    <P Name="Position">[330, 590, 360, 620]</P>
+    <P Name="ZOrder">659</P>
+    <P Name="Gain">1/2</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain3" SID="3049">
+    <P Name="Position">[330, 700, 360, 730]</P>
+    <P Name="ZOrder">660</P>
+    <P Name="Gain">1/2</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain4" SID="3050">
+    <P Name="Position">[530, 600, 560, 630]</P>
+    <P Name="ZOrder">683</P>
+    <P Name="Gain">-1</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="3051">
+    <P Name="Position">[-80, 515, -40, 545]</P>
+    <P Name="ZOrder">691</P>
+    <P Name="GotoTag">a_MB</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="3052">
+    <P Name="Position">[-70, 550, -30, 580]</P>
+    <P Name="ZOrder">695</P>
+    <P Name="GotoTag">b_MB</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="3053">
+    <P Name="Position">[450, 800, 470, 820]</P>
+    <P Name="ZOrder">680</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground1" SID="3054">
+    <P Name="Position">[490, 435, 510, 455]</P>
+    <P Name="ZOrder">681</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="3055">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[590, 266, 600, 404]</P>
+    <P Name="ZOrder">604</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">raggio vettore che collega il centro geom della faccia con il centro geom della faccia illuminata dal sole lungo k</P>
+    </Port>
+  </Block>
+  <Block BlockType="Mux" Name="Mux1" SID="3056">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[580, 591, 590, 729]</P>
+    <P Name="ZOrder">662</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">raggio vettore che collega il centro geom della faccia con il centro geom della faccia illuminata dal sole lungo -i</P>
+    </Port>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape" SID="3057">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[-40, 318, -10, 342]</P>
+    <P Name="ZOrder">597</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape2" SID="3058">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1035, 323, 1065, 347]</P>
+    <P Name="ZOrder">607</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape3" SID="3059">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1050, 648, 1080, 672]</P>
+    <P Name="ZOrder">665</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator1" SID="3060">
+    <P Name="Position">[-70, 590, -50, 610]</P>
+    <P Name="ZOrder">696</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator2" SID="3061">
+    <P Name="Position">[-70, 485, -50, 505]</P>
+    <P Name="ZOrder">690</P>
+  </Block>
+  <Block BlockType="Outport" Name="r_cface_cluce_x_neg_z_pos" SID="3062">
+    <P Name="Position">[1290, 488, 1320, 502]</P>
+    <P Name="ZOrder">608</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">3036#out:1</P>
+    <P Name="Points">[14, 0; 0, 45]</P>
+    <P Name="Dst">3055#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">3040#out:1</P>
+    <P Name="Dst">3047#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">raggio vettore che collega il centro geom della faccia con il centro geom della faccia illuminata dal sole lungo k</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3055#out:1</P>
+    <P Name="Dst">3058#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3047#out:1</P>
+    <P Name="Dst">3036#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3057#out:1</P>
+    <P Name="Points">[190, 0; 0, 40]</P>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Points">[0, 325]</P>
+      <P Name="Dst">3041#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Dst">3040#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">3045#out:1</P>
+    <P Name="Dst">3046#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">3046#out:1</P>
+    <P Name="Dst">3036#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">3044#out:1</P>
+    <P Name="Dst">3040#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">3033#out:1</P>
+    <P Name="Dst">3057#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">3054#out:1</P>
+    <P Name="Points">[28, 0; 0, -110]</P>
+    <Branch>
+      <P Name="ZOrder">13</P>
+      <P Name="Dst">3055#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">14</P>
+      <P Name="Points">[0, -45]</P>
+      <P Name="Dst">3055#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">3042#out:1</P>
+    <P Name="Dst">3041#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">raggio vettore che collega il centro geom della faccia con il centro geom della faccia illuminata dal sole lungo -i</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3056#out:1</P>
+    <P Name="Dst">3059#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">3053#out:1</P>
+    <P Name="Points">[87, 0; 0, -105]</P>
+    <Branch>
+      <P Name="ZOrder">18</P>
+      <P Name="Points">[0, -45]</P>
+      <P Name="Dst">3056#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">19</P>
+      <P Name="Dst">3056#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">3049#out:1</P>
+    <P Name="Dst">3037#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">3048#out:1</P>
+    <P Name="Dst">3037#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">3041#out:1</P>
+    <P Name="Dst">3049#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">3043#out:1</P>
+    <P Name="Dst">3048#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">3058#out:1</P>
+    <P Name="Points">[55, 0; 0, 110]</P>
+    <P Name="Dst">3038#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">25</P>
+    <P Name="Src">3059#out:1</P>
+    <P Name="Points">[40, 0; 0, -115]</P>
+    <P Name="Dst">3038#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">26</P>
+    <P Name="Src">3038#out:1</P>
+    <P Name="Dst">3062#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">27</P>
+    <P Name="Src">3050#out:1</P>
+    <P Name="Dst">3056#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">28</P>
+    <P Name="Src">3037#out:1</P>
+    <P Name="Points">[5, 0]</P>
+    <P Name="Dst">3050#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">29</P>
+    <P Name="Src">3039#out:1</P>
+    <P Name="Dst">3061#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">30</P>
+    <P Name="Src">3039#out:2</P>
+    <P Name="Dst">3051#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">31</P>
+    <P Name="Src">3034#out:1</P>
+    <P Name="Dst">3039#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">32</P>
+    <P Name="Src">3039#out:3</P>
+    <P Name="Dst">3052#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">33</P>
+    <P Name="Src">3039#out:4</P>
+    <P Name="Dst">3060#in:1</P>
+  </Line>
+</System>

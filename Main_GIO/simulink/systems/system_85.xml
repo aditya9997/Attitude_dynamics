@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[523, 62, 1519, 821]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">115</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="A_BN" SID="86">
+    <P Name="Position">[695, 328, 725, 342]</P>
+    <P Name="ZOrder">196</P>
+  </Block>
+  <Block BlockType="Inport" Name="R" SID="87">
+    <P Name="Position">[695, 518, 725, 532]</P>
+    <P Name="ZOrder">197</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="r_LVLH" SID="88">
+    <P Name="Position">[695, 453, 725, 467]</P>
+    <P Name="ZOrder">242</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Clock" Name="Clock" SID="91">
+    <P Name="Position">[700, 580, 720, 600]</P>
+    <P Name="ZOrder">246</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="95">
+    <P Name="Position">[695, 640, 725, 670]</P>
+    <P Name="ZOrder">254</P>
+    <P Name="Value">G</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant4" SID="96">
+    <P Name="Position">[695, 705, 725, 735]</P>
+    <P Name="ZOrder">255</P>
+    <P Name="Value">H</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="114">
+    <P Name="Position">[1045, 401, 1085, 429]</P>
+    <P Name="ZOrder">221</P>
+    <P Name="GotoTag">A_BN</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="116">
+    <P Name="Position">[770, 320, 810, 350]</P>
+    <P Name="ZOrder">222</P>
+    <P Name="GotoTag">A_BN</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="MATLAB Function" SID="118">
+    <P Name="Ports">[5, 1]</P>
+    <P Name="Position">[805, 430, 960, 750]</P>
+    <P Name="ZOrder">241</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_118"/>
+  </Block>
+  <Block BlockType="Product" Name="MatrixMultiply" SID="124">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1170, 381, 1245, 514]</P>
+    <P Name="ZOrder">217</P>
+    <P Name="Multiplication">Matrix(*)</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape1" SID="130">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[995, 578, 1025, 602]</P>
+    <P Name="ZOrder">256</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Outport" Name="b_B" SID="133">
+    <P Name="Position">[1320, 443, 1350, 457]</P>
+    <P Name="ZOrder">194</P>
+  </Block>
+  <Block BlockType="Outport" Name="b_N" SID="134">
+    <P Name="Position">[1150, 583, 1180, 597]</P>
+    <P Name="ZOrder">223</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">124#out:1</P>
+    <P Name="Dst">133#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">28</P>
+    <P Name="Src">86#out:1</P>
+    <P Name="Dst">116#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">29</P>
+    <P Name="Src">114#out:1</P>
+    <P Name="Dst">124#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">30</P>
+    <P Name="Src">88#out:1</P>
+    <P Name="Dst">118#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">31</P>
+    <P Name="Src">87#out:1</P>
+    <P Name="Dst">118#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">32</P>
+    <P Name="Src">91#out:1</P>
+    <P Name="Dst">118#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">33</P>
+    <P Name="Src">118#out:1</P>
+    <P Name="Dst">130#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">34</P>
+    <P Name="Src">95#out:1</P>
+    <P Name="Dst">118#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">35</P>
+    <P Name="Src">96#out:1</P>
+    <P Name="Dst">118#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">36</P>
+    <P Name="Src">130#out:1</P>
+    <P Name="Points">[27, 0]</P>
+    <Branch>
+      <P Name="ZOrder">37</P>
+      <P Name="Dst">134#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">40</P>
+      <P Name="Points">[0, -110]</P>
+      <P Name="Dst">124#in:2</P>
+    </Branch>
+  </Line>
+</System>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">150</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="MB" SID="2706">
+    <P Name="Position">[-245, 88, -215, 102]</P>
+    <P Name="ZOrder">592</P>
+  </Block>
+  <Block BlockType="Inport" Name="pointer" SID="2707">
+    <P Name="Position">[-245, 223, -215, 237]</P>
+    <P Name="ZOrder">598</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux" SID="2708">
+    <P Name="Ports">[1, 4]</P>
+    <P Name="Position">[-165, 18, -160, 172]</P>
+    <P Name="ZOrder">593</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="2709">
+    <P Name="Position">[-70, 25, -50, 45]</P>
+    <P Name="ZOrder">597</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="2710">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[-10, 65, -5, 185]</P>
+    <P Name="ZOrder">590</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="2711">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[-75, 147, -45, 178]</P>
+    <P Name="ZOrder">599</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape" SID="2712">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[55, 110, 80, 140]</P>
+    <P Name="ZOrder">591</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="2713">
+    <P Name="Position">[-125, 25, -105, 45]</P>
+    <P Name="ZOrder">594</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator1" SID="2714">
+    <P Name="Position">[-125, 65, -105, 85]</P>
+    <P Name="ZOrder">595</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator2" SID="2715">
+    <P Name="Position">[-125, 105, -105, 125]</P>
+    <P Name="ZOrder">596</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="2716">
+    <P Name="Position">[160, 118, 190, 132]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">2712#out:1</P>
+    <P Name="Dst">2716#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">2710#out:1</P>
+    <P Name="Dst">2712#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">2706#out:1</P>
+    <P Name="Dst">2708#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">2708#out:1</P>
+    <P Name="Dst">2713#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">2708#out:2</P>
+    <P Name="Dst">2714#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">2708#out:3</P>
+    <P Name="Dst">2715#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">2709#out:1</P>
+    <P Name="Points">[11, 0; 0, 50]</P>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Points">[0, 40]</P>
+      <P Name="Dst">2710#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">9</P>
+      <P Name="Dst">2710#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">2708#out:4</P>
+    <P Name="Dst">2711#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">2707#out:1</P>
+    <P Name="Points">[98, 0; 0, -60]</P>
+    <P Name="Dst">2711#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">2711#out:1</P>
+    <P Name="Dst">2710#in:3</P>
+  </Line>
+</System>

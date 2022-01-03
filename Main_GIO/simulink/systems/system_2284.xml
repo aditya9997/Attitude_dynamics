@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">80</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="A_B_N" SID="2285">
+    <P Name="Position">[1020, 303, 1050, 317]</P>
+    <P Name="ZOrder">307</P>
+  </Block>
+  <Block BlockType="Clock" Name="Clock" SID="2286">
+    <P Name="Position">[430, 246, 465, 284]</P>
+    <P Name="ZOrder">292</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="2287">
+    <P Name="Position">[210, 155, 240, 185]</P>
+    <P Name="ZOrder">294</P>
+    <P Name="NameLocation">left</P>
+    <P Name="Value">2*pi</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="2288">
+    <P Name="Position">[185, 225, 265, 255]</P>
+    <P Name="ZOrder">304</P>
+    <P Name="Value">365*24*60*60</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="2289">
+    <P Name="Position">[195, 365, 260, 395]</P>
+    <P Name="ZOrder">305</P>
+    <P Name="Value">23.45</P>
+  </Block>
+  <Block BlockType="Reference" Name="Degrees to&#xA;Radians" SID="2290">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[315, 365, 345, 395]</P>
+    <P Name="ZOrder">306</P>
+    <P Name="LibraryVersion">8.0</P>
+    <P Name="SourceBlock">simulink_extras/Transformations/Degrees to
+Radians</P>
+    <P Name="SourceType">DegreesToRadians</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Product" Name="MatrixMultiply" SID="2291">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1130, 289, 1260, 371]</P>
+    <P Name="ZOrder">308</P>
+    <P Name="Multiplication">Matrix(*)</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="2292">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[950, 271, 955, 429]</P>
+    <P Name="ZOrder">293</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="2293">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[435, 192, 465, 223]</P>
+    <P Name="ZOrder">296</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">n</P>
+    </Port>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="2294">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[535, 202, 565, 233]</P>
+    <P Name="ZOrder">299</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">n*t</P>
+    </Port>
+  </Block>
+  <Block BlockType="Product" Name="Product2" SID="2295">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[805, 332, 835, 363]</P>
+    <P Name="ZOrder">302</P>
+  </Block>
+  <Block BlockType="Product" Name="Product3" SID="2296">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[805, 382, 835, 413]</P>
+    <P Name="ZOrder">303</P>
+  </Block>
+  <Block BlockType="Product" Name="Reciprocal" SID="2297">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[315, 224, 345, 256]</P>
+    <P Name="ZOrder">295</P>
+    <P Name="Inputs">1</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape" SID="2298">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1020, 338, 1050, 362]</P>
+    <P Name="ZOrder">309</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Trigonometry" Name="Sin" SID="2299">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[665, 165, 695, 195]</P>
+    <P Name="ZOrder">297</P>
+    <P Name="Operator">cos</P>
+  </Block>
+  <Block BlockType="Trigonometry" Name="Sin1" SID="2300">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[665, 250, 695, 280]</P>
+    <P Name="ZOrder">298</P>
+  </Block>
+  <Block BlockType="Trigonometry" Name="Sin2" SID="2301">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[435, 340, 465, 370]</P>
+    <P Name="ZOrder">300</P>
+    <P Name="Operator">cos</P>
+  </Block>
+  <Block BlockType="Trigonometry" Name="Sin3" SID="2302">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[435, 390, 465, 420]</P>
+    <P Name="ZOrder">301</P>
+  </Block>
+  <Block BlockType="Outport" Name="S_B" SID="2303">
+    <P Name="Position">[1340, 323, 1370, 337]</P>
+    <P Name="ZOrder">291</P>
+  </Block>
+  <Block BlockType="Outport" Name="S_N" SID="2304">
+    <P Name="Position">[1340, 418, 1370, 432]</P>
+    <P Name="ZOrder">310</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">2296#out:1</P>
+    <P Name="Dst">2292#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">2290#out:1</P>
+    <P Name="Points">[40, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Points">[0, 25]</P>
+      <P Name="Dst">2302#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, -25]</P>
+      <P Name="Dst">2301#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">2288#out:1</P>
+    <P Name="Dst">2297#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">2301#out:1</P>
+    <P Name="Dst">2295#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">n</P>
+    <P Name="ZOrder">7</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">2293#out:1</P>
+    <P Name="Dst">2294#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">2289#out:1</P>
+    <P Name="Dst">2290#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">n*t</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">2294#out:1</P>
+    <P Name="Points">[58, 0]</P>
+    <Branch>
+      <P Name="ZOrder">10</P>
+      <P Name="Points">[0, -40]</P>
+      <P Name="Dst">2299#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Points">[0, 45]</P>
+      <P Name="Dst">2300#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">2295#out:1</P>
+    <P Name="Dst">2292#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">2302#out:1</P>
+    <P Name="Dst">2296#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">2286#out:1</P>
+    <P Name="Points">[37, 0; 0, -40]</P>
+    <P Name="Dst">2294#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">2300#out:1</P>
+    <P Name="Points">[32, 0; 0, 75]</P>
+    <Branch>
+      <P Name="ZOrder">16</P>
+      <P Name="Points">[0, 50]</P>
+      <P Name="Dst">2296#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">17</P>
+      <P Name="Dst">2295#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">2287#out:1</P>
+    <P Name="Points">[147, 0; 0, 30]</P>
+    <P Name="Dst">2293#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">2299#out:1</P>
+    <P Name="Points">[123, 0; 0, 120]</P>
+    <P Name="Dst">2292#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">2297#out:1</P>
+    <P Name="Points">[40, 0; 0, -25]</P>
+    <P Name="Dst">2293#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">2292#out:1</P>
+    <P Name="Dst">2298#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">2285#out:1</P>
+    <P Name="Dst">2291#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">2291#out:1</P>
+    <P Name="Dst">2303#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">2298#out:1</P>
+    <P Name="Points">[60, 0]</P>
+    <Branch>
+      <P Name="ZOrder">25</P>
+      <P Name="Points">[0, 75]</P>
+      <P Name="Dst">2304#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">26</P>
+      <P Name="Dst">2291#in:2</P>
+    </Branch>
+  </Line>
+</System>

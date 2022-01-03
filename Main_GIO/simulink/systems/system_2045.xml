@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-7, -7, 1543, 831]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">125</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="S_B" SID="2046">
+    <P Name="Position">[10, 28, 40, 42]</P>
+    <P Name="ZOrder">888</P>
+  </Block>
+  <Block BlockType="Inport" Name="N_MB" SID="2047">
+    <P Name="Position">[20, 123, 50, 137]</P>
+    <P Name="ZOrder">889</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="2048">
+    <P Name="Position">[15, 65, 45, 95]</P>
+    <P Name="ZOrder">880</P>
+    <P Name="Value">[1, 1, 1]</P>
+  </Block>
+  <Block BlockType="Product" Name="Matrix Multiply5" SID="2049">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[215, 52, 260, 88]</P>
+    <P Name="ZOrder">882</P>
+    <P Name="Multiplication">Matrix(*)</P>
+  </Block>
+  <Block BlockType="Product" Name="Product10" SID="2050">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[315, 41, 345, 159]</P>
+    <P Name="ZOrder">883</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape11" SID="2051">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[100, 65, 130, 95]</P>
+    <P Name="ZOrder">881</P>
+    <P Name="OutputDimensionality">Row vector (2-D)</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape12" SID="2052">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[100, 20, 130, 50]</P>
+    <P Name="ZOrder">885</P>
+    <P Name="OutputDimensionality">Column vector (2-D)</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum of&#xA;Elements" SID="2053">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[415, 85, 445, 115]</P>
+    <P Name="ZOrder">884</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+</P>
+    <P Name="CollapseMode">Specified dimension</P>
+    <P Name="CollapseDim">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="2054">
+    <P Name="Position">[525, 93, 555, 107]</P>
+    <P Name="ZOrder">890</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">2049#out:1</P>
+    <P Name="Dst">2050#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">2052#out:1</P>
+    <P Name="Points">[-5, 0; 48, 0; 0, 25]</P>
+    <P Name="Dst">2049#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">2046#out:1</P>
+    <P Name="Dst">2052#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">2050#out:1</P>
+    <P Name="Dst">2053#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">2047#out:1</P>
+    <P Name="Dst">2050#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">2053#out:1</P>
+    <P Name="Dst">2054#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">2048#out:1</P>
+    <P Name="Dst">2051#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">2051#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">2049#in:2</P>
+  </Line>
+</System>
