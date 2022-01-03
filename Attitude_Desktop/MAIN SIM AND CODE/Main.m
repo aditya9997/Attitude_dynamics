@@ -2,6 +2,12 @@ clear all
 close all
 clc
 
+%re = 6371*1e3;
+%a = 7195 *1e3; %semi major axis in meters
+%i = deg2rad(98.7);
+%rp = 818.3*1e3 + re;
+%ra = 830.8*1e3 + re;
+%e = (ra-rp)/(ra+rp);
 %% definisco dati
 
 %Orbit definition
@@ -21,58 +27,20 @@ A_BN_0 =  [1/3, 2/3, 2/3; ...
           -2/3, 2/3,-1/3];
 
 %SRP
-RS_MB = 0.5;
-RS_SP = 0.1;
+rho_d_MB = 0.1;
+rho_s_MB = 0.5;
+rho_s_SP = 0.1;
+rho_d_SP = 0.1;
 
-RD = 0.1*ones(1,10);
-
-A_MB = 0.5*ones(1,6); %[m^2]
-
-RD_MB = 0.1*ones(6,1);
-RD_SP = 0.1*ones(4,1);
-
-
-A_SP = 1; %[m^2]
 c = 299792*10^3; %[m/s]
 n_Sun = 2*pi/(365*24*60*60);
 eps = deg2rad(23.45);
 w_E = (2*pi)/(24*3600); %angular veloity of earth
 
-
-% %% Magnetic field Gauss
-% k = 4;                  %order of approximation IGRF
-% 
-% % Gauss mapping matrix of the h,g values of the IGRF table 
-% S = zeros(k, k);
-% for n = 1:k
-%     for m = 0:(n - 1)
-%         if m == 0
-%             if n == 1
-%                 S(n,m + 1) = 1;
-%             else
-%                 S(n,m + 1) = S(n - 1, m + 1) * ( (2 * n - 1 ) / n );
-%             end
-%         elseif m == 1
-%             S(n, m + 1) = S(n, m) * sqrt( (n - m + 1) * 2 / (n + m) );
-%         else
-%             S(n, m + 1) = S(n, m) * sqrt( (n - m + 1) / (n + m) );
-%         end
-%     end
-% end
-
-
-
-%Defining terms for computing H0 of magnetic field (see slides of Lab 7).
-%First number refers to the pedice and second to the apice
-g_1_0 = -29682*10^-9;
-g_1_1 = -1789*10^-9;
-h_1_1 = 5318*10^-9;
-H_0 = sqrt((g_1_0)^2 + (g_1_1)^2 + (h_1_1)^2);
-
 %condizioni iniziali
-om_x = 0;
-om_y = 0;
-om_z = 0;
+om_x = 2;
+om_y = 2;
+om_z = 2;
 omega_0 = [om_x, om_y, om_z];
 theta0 = 0;
 
@@ -81,7 +49,7 @@ Time = 1*(2*pi/n);
 
 %Mass and three dimensions of the S/C main body(MB) and solar panel(SP)
 MB = [10; 0.3; 0.3; 0.3];
-SP = [30; 0.3; 1; 3e-2];
+SP = [30; 0.3; 1; 0.1];
 
 %magnetometer
 p_acc = 0.5; %[degree], look at slide 12 of attitude sensors, bernelli's slide
@@ -99,7 +67,7 @@ A_rw_star =  [5/6 -1/6 -1/6;...
 
 
 % %Gyro
-t_sample = 1;
+t_sample = 0.1;
 sig_b = 0.3*pi/180/3600/sqrt(t_sample);
 sig_n = 0.15*pi/180/3600/sqrt(t_sample);
 sig_b = sig_b^2;
