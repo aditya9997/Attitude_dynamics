@@ -83,7 +83,7 @@ A_rw_star =  [5/6 -1/6 -1/6;...
 Time = 1*T;         %[s]
 
 %% plot
-out = sim('Main_simulation');
+out = sim('Main_simulation_gio');
     %Slew
       
         %error
