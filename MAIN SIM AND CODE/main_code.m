@@ -85,7 +85,7 @@ A_rw_star =  [5/6 -1/6 -1/6;...
 %% Simulation data
 
 Time = 1*T;                     %[s]
-control = 1;                    %[-] Set control to choose the maneouvre, 1 for detumbling, 2 for trajectory tracking, 3 for slew
+control = 3;                    %[-] Set control to choose the maneouvre, 1 for detumbling, 2 for trajectory tracking, 3 for slew
 
 %% Maneouvres
 
