@@ -1,0 +1,6 @@
+% Angular velocity
+w_0x = 0.7;                       %[rad/s]        omega x
+w_0y = 0.5;                       %[rad/s]        omega y
+w_0z = 0.3;                       %[rad/s]        omega z
+k1 = 9.9e-2
+k2 = 1.25e-3

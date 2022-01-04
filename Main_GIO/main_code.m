@@ -25,9 +25,9 @@ T = 2*pi / n;          %[s]             Orbit period
 theta_0 = 0;                    %[rad]          Initial true anomaly
 
 % Angular velocity
-w_0x = 0.7;                       %[rad/s]        omega x
-w_0y = 0.5;                       %[rad/s]        omega y
-w_0z = 0.3;                       %[rad/s]        omega z
+w_0x = 0.12e-5;                       %[rad/s]        omega x
+w_0y = 0.18e-5;                       %[rad/s]        omega y
+w_0z = 0.15e-5;                       %[rad/s]        omega z
 omega_0 = [w_0x; w_0y; w_0z];   %[rad/s] [3x1]  omega vector
 
 % Attitude
@@ -81,6 +81,37 @@ A_rw_star =  [5/6 -1/6 -1/6;...
 %% Simulation data
 
 Time = 1*T;         %[s]
+
+%% plot
+out = sim('Main_simulation');
+    %Slew
+      
+        %error
+figure(1)
+plot(out.error)
+title("Attitude Error")
+xlabel("Time [s]")
+ylabel("Attitude Error [-]")
+legend("error")
+grid on
+
+        %omega
+figure(2)
+plot(out.omega)
+title("ω_BN")
+xlabel("Time [s]")
+ylabel("ω [rad]")
+legend("ω_1", "ω_2", "ω_3")
+grid on
+
+    %A_BN
+figure(3)
+plot(out.A_BN)
+title("A_BN")
+xlabel("Time [s]")
+ylabel("A_BN [rad]")
+legend("A11", "A12", "A13", "A21", "A22", "A23", "A31", "A32", "A33")
+grid on
 
 
 
