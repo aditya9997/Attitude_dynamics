@@ -186,7 +186,7 @@ elseif control == 2
    
     out = sim('Main_simulation_davide');
 
-    %error
+    %error7
     figure(1)
     plot(out.contr_err)
     title("Attitude Error")
