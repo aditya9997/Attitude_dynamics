@@ -254,7 +254,7 @@ plot(out1.err1, 'r', 'Linewidth', 2);
 hold on 
 plot(out.err1, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
-ylabel('Err [-] ');
+ylabel('Err [deg] ');
 legend( 'Closed loop', 'Open loop');
 grid on
 hold off
@@ -264,7 +264,7 @@ plot(out1.err2, 'r', 'Linewidth', 2);
 hold on 
 plot(out.err2, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
-ylabel('Err2 [-] ');
+ylabel('Err2 [deg] ');
 legend( 'Closed loop', 'Open loop');
 grid on
 hold off
@@ -274,7 +274,7 @@ plot(out1.err3, 'r', 'Linewidth', 2);
 hold on 
 plot(out.err3, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
-ylabel('Err3 [-] ');
+ylabel('Err3 [deg] ');
 legend( 'Closed loop', 'Open loop');
 grid on
 hold off
