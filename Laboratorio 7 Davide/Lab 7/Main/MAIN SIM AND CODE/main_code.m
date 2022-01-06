@@ -85,7 +85,7 @@ A_rw_star =  [5/6 -1/6 -1/6;...
 %% Simulation data
 
 Time = 1*T;                     %[s]
-control = 3;                    %[-] Set control to choose the maneouvre, 1 for detumbling, 2 for trajectory tracking, 3 for slew
+control = 2;                    %[-] Set control to choose the maneouvre, 1 for detumbling, 2 for trajectory tracking, 3 for slew
 
 %% Maneouvres
 
@@ -102,7 +102,7 @@ if control == 1
     % Attitude
     A_BN_0 = eye(3);                %[-]            DCM
     
-    out = sim('Main_simulation');
+    out = sim('Main_simulation_davide');
 
     %omega
     figure(1)
@@ -141,7 +141,7 @@ elseif control == 3
     A_BN_0 = eye(3);                %[-]            DCM
     %A_BN_0 =  [1/3, 2/3, 2/3; 2/3, 1/3, -2/3; -2/3, 2/3,-1/3];
    
-    out = sim('Main_simulation');
+    out = sim('Main_simulation_davide');
 
     %error
     figure(1)
@@ -184,7 +184,7 @@ elseif control == 2
     A_BN_0 = eye(3);                %[-]            DCM
     %A_BN_0 =  [1/3, 2/3, 2/3; 2/3, 1/3, -2/3; -2/3, 2/3,-1/3];
    
-    out = sim('Main_simulation');
+    out = sim('Main_simulation_davide');
 
     %error
     figure(1)
