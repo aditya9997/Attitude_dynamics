@@ -224,7 +224,7 @@ hold on
 plot(out.w_B1, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('w_x [rad/s]');
-legend( 'Closed loop', 'Open loop');
+legend('Open loop', 'Closed loop');
 grid on
 hold off
 
@@ -234,7 +234,7 @@ hold on
 plot(out.w_B2, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('w_y [rad/s]');
-legend( 'Closed loop', 'Open loop');
+legend('Open loop', 'Closed loop');
 grid on
 hold off
 
@@ -244,7 +244,7 @@ hold on
 plot(out.w_B3, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('w_z [rad/s]');
-legend( 'Closed loop', 'Open loop');
+legend('Open loop', 'Closed loop');
 grid on
 hold off
 
@@ -255,7 +255,7 @@ hold on
 plot(out.err1, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('Err [-] ');
-legend( 'Closed loop', 'Open loop');
+legend('Open loop', 'Closed loop');
 grid on
 hold off
 
@@ -265,7 +265,7 @@ hold on
 plot(out.err2, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('Err2 [-] ');
-legend( 'Closed loop', 'Open loop');
+legend('Open loop', 'Closed loop');
 grid on
 hold off
 
@@ -275,6 +275,6 @@ hold on
 plot(out.err3, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('Err3 [-] ');
-legend( 'Closed loop', 'Open loop');
+legend('Open loop', 'Closed loop');
 grid on
 hold off
