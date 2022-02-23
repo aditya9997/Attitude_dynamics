@@ -186,7 +186,7 @@ elseif control == 2
     %A_BN_0 =  [1/3, 2/3, 2/3; 2/3, 1/3, -2/3; -2/3, 2/3,-1/3];
    
     out = sim('Main_simulation_davide');
-    out1 = sim('Main_simulation_davide.slx');
+%     out1 = sim('Main_simulation_davide');
 
     %error7
     figure(1)
@@ -223,8 +223,9 @@ plot(out1.w_B1, 'r', 'Linewidth', 2);
 hold on
 plot(out.w_B1, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
-ylabel('w_x [rad/s]');
+ylabel('ω _x [rad/s]');
 legend( 'Closed loop', 'Open loop');
+title('ω_x')
 grid on
 hold off
 
@@ -233,8 +234,9 @@ plot(out1.w_B2, 'r', 'Linewidth', 2);
 hold on 
 plot(out.w_B2, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
-ylabel('w_y [rad/s]');
+ylabel('ω _y [rad/s]');
 legend( 'Closed loop', 'Open loop');
+title('ω_y')
 grid on
 hold off
 
@@ -243,8 +245,9 @@ plot(out1.w_B3, 'r', 'Linewidth', 2);
 hold on 
 plot(out.w_B3, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
-ylabel('w_z [rad/s]');
+ylabel('ω _z [rad/s]');
 legend( 'Closed loop', 'Open loop');
+title('ω_z')
 grid on
 hold off
 
@@ -256,6 +259,7 @@ plot(out.err1, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('Err [deg] ');
 legend( 'Closed loop', 'Open loop');
+title('First error component')
 grid on
 hold off
 
@@ -266,6 +270,7 @@ plot(out.err2, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('Err2 [deg] ');
 legend( 'Closed loop', 'Open loop');
+title('Second error component')
 grid on
 hold off
 
@@ -276,5 +281,6 @@ plot(out.err3, 'b', 'Linewidth', 2);
 xlabel('Time [s]');
 ylabel('Err3 [deg] ');
 legend( 'Closed loop', 'Open loop');
+title('Third error component')
 grid on
 hold off
